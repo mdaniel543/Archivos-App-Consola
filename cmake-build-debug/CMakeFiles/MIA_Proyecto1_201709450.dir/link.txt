@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o -o MIA_Proyecto1_201709450 
