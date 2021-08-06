@@ -1,8 +1,11 @@
-#include <iostream>
+#include "Analizador /Interprete.h"
+
 using namespace std;
 
 int main() {
-    cout << "Hola soy nuevo en esto de linux " << endl;
+    cout << " BIENVENIDO " << endl;
+    Interprete interprete;
+    interprete.interpretar();
     return 0;
 }
 

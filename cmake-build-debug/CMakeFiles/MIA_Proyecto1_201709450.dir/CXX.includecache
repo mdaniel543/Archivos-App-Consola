@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/daniel/Escritorio/MIA-Proyecto1-201709450/main.cpp
+/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkdisk.cpp
+mkdisk.h
+/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkdisk.h
+
+/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkdisk.h
+vector
+-
+string
+-
 iostream
+-
+sstream
+-
+algorithm
 -
 

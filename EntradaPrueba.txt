@@ -1,0 +1,1 @@
+Mkdisk -Size=3000 –u=K -path=/home/user/Disco1.dk

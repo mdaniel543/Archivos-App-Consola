@@ -129,6 +129,126 @@ MIA_Proyecto1_201709450/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/build
 .PHONY : MIA_Proyecto1_201709450/fast
 
+Administracion_Carpetas/chmod.o: Administracion_Carpetas/chmod.cpp.o
+.PHONY : Administracion_Carpetas/chmod.o
+
+# target to build an object file
+Administracion_Carpetas/chmod.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas/chmod.cpp.o
+.PHONY : Administracion_Carpetas/chmod.cpp.o
+
+Administracion_Carpetas/chmod.i: Administracion_Carpetas/chmod.cpp.i
+.PHONY : Administracion_Carpetas/chmod.i
+
+# target to preprocess a source file
+Administracion_Carpetas/chmod.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas/chmod.cpp.i
+.PHONY : Administracion_Carpetas/chmod.cpp.i
+
+Administracion_Carpetas/chmod.s: Administracion_Carpetas/chmod.cpp.s
+.PHONY : Administracion_Carpetas/chmod.s
+
+# target to generate assembly for a file
+Administracion_Carpetas/chmod.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas/chmod.cpp.s
+.PHONY : Administracion_Carpetas/chmod.cpp.s
+
+Administracion_Discos/mkdisk.o: Administracion_Discos/mkdisk.cpp.o
+.PHONY : Administracion_Discos/mkdisk.o
+
+# target to build an object file
+Administracion_Discos/mkdisk.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.o
+.PHONY : Administracion_Discos/mkdisk.cpp.o
+
+Administracion_Discos/mkdisk.i: Administracion_Discos/mkdisk.cpp.i
+.PHONY : Administracion_Discos/mkdisk.i
+
+# target to preprocess a source file
+Administracion_Discos/mkdisk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.i
+.PHONY : Administracion_Discos/mkdisk.cpp.i
+
+Administracion_Discos/mkdisk.s: Administracion_Discos/mkdisk.cpp.s
+.PHONY : Administracion_Discos/mkdisk.s
+
+# target to generate assembly for a file
+Administracion_Discos/mkdisk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.s
+.PHONY : Administracion_Discos/mkdisk.cpp.s
+
+Administracion_Usuarios/login.o: Administracion_Usuarios/login.cpp.o
+.PHONY : Administracion_Usuarios/login.o
+
+# target to build an object file
+Administracion_Usuarios/login.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.o
+.PHONY : Administracion_Usuarios/login.cpp.o
+
+Administracion_Usuarios/login.i: Administracion_Usuarios/login.cpp.i
+.PHONY : Administracion_Usuarios/login.i
+
+# target to preprocess a source file
+Administracion_Usuarios/login.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.i
+.PHONY : Administracion_Usuarios/login.cpp.i
+
+Administracion_Usuarios/login.s: Administracion_Usuarios/login.cpp.s
+.PHONY : Administracion_Usuarios/login.s
+
+# target to generate assembly for a file
+Administracion_Usuarios/login.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.s
+.PHONY : Administracion_Usuarios/login.cpp.s
+
+Analizador_/Interprete.o: Analizador_/Interprete.cpp.o
+.PHONY : Analizador_/Interprete.o
+
+# target to build an object file
+Analizador_/Interprete.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.o
+.PHONY : Analizador_/Interprete.cpp.o
+
+Analizador_/Interprete.i: Analizador_/Interprete.cpp.i
+.PHONY : Analizador_/Interprete.i
+
+# target to preprocess a source file
+Analizador_/Interprete.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.i
+.PHONY : Analizador_/Interprete.cpp.i
+
+Analizador_/Interprete.s: Analizador_/Interprete.cpp.s
+.PHONY : Analizador_/Interprete.s
+
+# target to generate assembly for a file
+Analizador_/Interprete.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.s
+.PHONY : Analizador_/Interprete.cpp.s
+
+Reportes/name.o: Reportes/name.cpp.o
+.PHONY : Reportes/name.o
+
+# target to build an object file
+Reportes/name.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o
+.PHONY : Reportes/name.cpp.o
+
+Reportes/name.i: Reportes/name.cpp.i
+.PHONY : Reportes/name.i
+
+# target to preprocess a source file
+Reportes/name.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.i
+.PHONY : Reportes/name.cpp.i
+
+Reportes/name.s: Reportes/name.cpp.s
+.PHONY : Reportes/name.s
+
+# target to generate assembly for a file
+Reportes/name.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.s
+.PHONY : Reportes/name.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +282,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MIA_Proyecto1_201709450"
+	@echo "... Administracion_Carpetas/chmod.o"
+	@echo "... Administracion_Carpetas/chmod.i"
+	@echo "... Administracion_Carpetas/chmod.s"
+	@echo "... Administracion_Discos/mkdisk.o"
+	@echo "... Administracion_Discos/mkdisk.i"
+	@echo "... Administracion_Discos/mkdisk.s"
+	@echo "... Administracion_Usuarios/login.o"
+	@echo "... Administracion_Usuarios/login.i"
+	@echo "... Administracion_Usuarios/login.s"
+	@echo "... Analizador_/Interprete.o"
+	@echo "... Analizador_/Interprete.i"
+	@echo "... Analizador_/Interprete.s"
+	@echo "... Reportes/name.o"
+	@echo "... Reportes/name.i"
+	@echo "... Reportes/name.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
