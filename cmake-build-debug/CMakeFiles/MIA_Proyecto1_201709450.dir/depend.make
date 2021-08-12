@@ -6,18 +6,27 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas/chmod.cpp.o: \
  ../Administracion\ Carpetas/chmod.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.o: \
  ../Administracion\ Discos/mkdisk.cpp \
- ../Administracion\ Discos/mkdisk.h
+ ../Administracion\ Discos/mkdisk.h \
+ ../Discos/estructuras.h
+CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o: \
+ ../Administracion\ Discos/rmdisk.cpp \
+ ../Administracion\ Discos/rmdisk.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.o: \
  ../Administracion\ Usuarios/login.cpp \
  ../Administracion\ Usuarios/login.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.o: \
  ../Administracion\ Discos/mkdisk.h \
  ../Analizador\ /Interprete.cpp \
- ../Analizador\ /Interprete.h
+ ../Analizador\ /Interprete.h \
+ ../Discos/estructuras.h
+CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o: \
+ ../Discos/estructuras.cpp \
+ ../Discos/estructuras.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o: \
  ../Reportes/name.cpp \
  ../Reportes/name.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o: \
  ../Administracion\ Discos/mkdisk.h \
  ../Analizador\ /Interprete.h \
+ ../Discos/estructuras.h \
  ../main.cpp

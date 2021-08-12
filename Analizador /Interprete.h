@@ -22,6 +22,7 @@ public:
     void interpretar();
     void SepararComando(string lineacomando);
     void ReconocerComando(string comando, vector<string> parametros);
+    vector<string> ReconocerComilla(vector<string> ant);
 
     string ToLower(string cadena);
 

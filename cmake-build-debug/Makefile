@@ -177,6 +177,30 @@ Administracion_Discos/mkdisk.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.s
 .PHONY : Administracion_Discos/mkdisk.cpp.s
 
+Administracion_Discos/rmdisk.o: Administracion_Discos/rmdisk.cpp.o
+.PHONY : Administracion_Discos/rmdisk.o
+
+# target to build an object file
+Administracion_Discos/rmdisk.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o
+.PHONY : Administracion_Discos/rmdisk.cpp.o
+
+Administracion_Discos/rmdisk.i: Administracion_Discos/rmdisk.cpp.i
+.PHONY : Administracion_Discos/rmdisk.i
+
+# target to preprocess a source file
+Administracion_Discos/rmdisk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.i
+.PHONY : Administracion_Discos/rmdisk.cpp.i
+
+Administracion_Discos/rmdisk.s: Administracion_Discos/rmdisk.cpp.s
+.PHONY : Administracion_Discos/rmdisk.s
+
+# target to generate assembly for a file
+Administracion_Discos/rmdisk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.s
+.PHONY : Administracion_Discos/rmdisk.cpp.s
+
 Administracion_Usuarios/login.o: Administracion_Usuarios/login.cpp.o
 .PHONY : Administracion_Usuarios/login.o
 
@@ -224,6 +248,30 @@ Analizador_/Interprete.s: Analizador_/Interprete.cpp.s
 Analizador_/Interprete.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.s
 .PHONY : Analizador_/Interprete.cpp.s
+
+Discos/estructuras.o: Discos/estructuras.cpp.o
+.PHONY : Discos/estructuras.o
+
+# target to build an object file
+Discos/estructuras.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o
+.PHONY : Discos/estructuras.cpp.o
+
+Discos/estructuras.i: Discos/estructuras.cpp.i
+.PHONY : Discos/estructuras.i
+
+# target to preprocess a source file
+Discos/estructuras.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.i
+.PHONY : Discos/estructuras.cpp.i
+
+Discos/estructuras.s: Discos/estructuras.cpp.s
+.PHONY : Discos/estructuras.s
+
+# target to generate assembly for a file
+Discos/estructuras.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.s
+.PHONY : Discos/estructuras.cpp.s
 
 Reportes/name.o: Reportes/name.cpp.o
 .PHONY : Reportes/name.o
@@ -288,12 +336,18 @@ help:
 	@echo "... Administracion_Discos/mkdisk.o"
 	@echo "... Administracion_Discos/mkdisk.i"
 	@echo "... Administracion_Discos/mkdisk.s"
+	@echo "... Administracion_Discos/rmdisk.o"
+	@echo "... Administracion_Discos/rmdisk.i"
+	@echo "... Administracion_Discos/rmdisk.s"
 	@echo "... Administracion_Usuarios/login.o"
 	@echo "... Administracion_Usuarios/login.i"
 	@echo "... Administracion_Usuarios/login.s"
 	@echo "... Analizador_/Interprete.o"
 	@echo "... Analizador_/Interprete.i"
 	@echo "... Analizador_/Interprete.s"
+	@echo "... Discos/estructuras.o"
+	@echo "... Discos/estructuras.i"
+	@echo "... Discos/estructuras.s"
 	@echo "... Reportes/name.o"
 	@echo "... Reportes/name.i"
 	@echo "... Reportes/name.s"
