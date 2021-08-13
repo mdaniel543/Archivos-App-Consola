@@ -129,29 +129,77 @@ MIA_Proyecto1_201709450/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/build
 .PHONY : MIA_Proyecto1_201709450/fast
 
-Administracion_Carpetas/chmod.o: Administracion_Carpetas/chmod.cpp.o
-.PHONY : Administracion_Carpetas/chmod.o
+Administracion_Carpetas_y_Permisos/chmod.o: Administracion_Carpetas_y_Permisos/chmod.cpp.o
+.PHONY : Administracion_Carpetas_y_Permisos/chmod.o
 
 # target to build an object file
-Administracion_Carpetas/chmod.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas/chmod.cpp.o
-.PHONY : Administracion_Carpetas/chmod.cpp.o
+Administracion_Carpetas_y_Permisos/chmod.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/chmod.cpp.o
+.PHONY : Administracion_Carpetas_y_Permisos/chmod.cpp.o
 
-Administracion_Carpetas/chmod.i: Administracion_Carpetas/chmod.cpp.i
-.PHONY : Administracion_Carpetas/chmod.i
+Administracion_Carpetas_y_Permisos/chmod.i: Administracion_Carpetas_y_Permisos/chmod.cpp.i
+.PHONY : Administracion_Carpetas_y_Permisos/chmod.i
 
 # target to preprocess a source file
-Administracion_Carpetas/chmod.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas/chmod.cpp.i
-.PHONY : Administracion_Carpetas/chmod.cpp.i
+Administracion_Carpetas_y_Permisos/chmod.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/chmod.cpp.i
+.PHONY : Administracion_Carpetas_y_Permisos/chmod.cpp.i
 
-Administracion_Carpetas/chmod.s: Administracion_Carpetas/chmod.cpp.s
-.PHONY : Administracion_Carpetas/chmod.s
+Administracion_Carpetas_y_Permisos/chmod.s: Administracion_Carpetas_y_Permisos/chmod.cpp.s
+.PHONY : Administracion_Carpetas_y_Permisos/chmod.s
 
 # target to generate assembly for a file
-Administracion_Carpetas/chmod.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas/chmod.cpp.s
-.PHONY : Administracion_Carpetas/chmod.cpp.s
+Administracion_Carpetas_y_Permisos/chmod.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/chmod.cpp.s
+.PHONY : Administracion_Carpetas_y_Permisos/chmod.cpp.s
+
+Administracion_Carpetas_y_Permisos/pause.o: Administracion_Carpetas_y_Permisos/pause.cpp.o
+.PHONY : Administracion_Carpetas_y_Permisos/pause.o
+
+# target to build an object file
+Administracion_Carpetas_y_Permisos/pause.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.cpp.o
+.PHONY : Administracion_Carpetas_y_Permisos/pause.cpp.o
+
+Administracion_Carpetas_y_Permisos/pause.i: Administracion_Carpetas_y_Permisos/pause.cpp.i
+.PHONY : Administracion_Carpetas_y_Permisos/pause.i
+
+# target to preprocess a source file
+Administracion_Carpetas_y_Permisos/pause.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.cpp.i
+.PHONY : Administracion_Carpetas_y_Permisos/pause.cpp.i
+
+Administracion_Carpetas_y_Permisos/pause.s: Administracion_Carpetas_y_Permisos/pause.cpp.s
+.PHONY : Administracion_Carpetas_y_Permisos/pause.s
+
+# target to generate assembly for a file
+Administracion_Carpetas_y_Permisos/pause.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.cpp.s
+.PHONY : Administracion_Carpetas_y_Permisos/pause.cpp.s
+
+Administracion_Discos/fdisk.o: Administracion_Discos/fdisk.cpp.o
+.PHONY : Administracion_Discos/fdisk.o
+
+# target to build an object file
+Administracion_Discos/fdisk.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.o
+.PHONY : Administracion_Discos/fdisk.cpp.o
+
+Administracion_Discos/fdisk.i: Administracion_Discos/fdisk.cpp.i
+.PHONY : Administracion_Discos/fdisk.i
+
+# target to preprocess a source file
+Administracion_Discos/fdisk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.i
+.PHONY : Administracion_Discos/fdisk.cpp.i
+
+Administracion_Discos/fdisk.s: Administracion_Discos/fdisk.cpp.s
+.PHONY : Administracion_Discos/fdisk.s
+
+# target to generate assembly for a file
+Administracion_Discos/fdisk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.s
+.PHONY : Administracion_Discos/fdisk.cpp.s
 
 Administracion_Discos/mkdisk.o: Administracion_Discos/mkdisk.cpp.o
 .PHONY : Administracion_Discos/mkdisk.o
@@ -176,6 +224,30 @@ Administracion_Discos/mkdisk.s: Administracion_Discos/mkdisk.cpp.s
 Administracion_Discos/mkdisk.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.s
 .PHONY : Administracion_Discos/mkdisk.cpp.s
+
+Administracion_Discos/mount.o: Administracion_Discos/mount.cpp.o
+.PHONY : Administracion_Discos/mount.o
+
+# target to build an object file
+Administracion_Discos/mount.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o
+.PHONY : Administracion_Discos/mount.cpp.o
+
+Administracion_Discos/mount.i: Administracion_Discos/mount.cpp.i
+.PHONY : Administracion_Discos/mount.i
+
+# target to preprocess a source file
+Administracion_Discos/mount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.i
+.PHONY : Administracion_Discos/mount.cpp.i
+
+Administracion_Discos/mount.s: Administracion_Discos/mount.cpp.s
+.PHONY : Administracion_Discos/mount.s
+
+# target to generate assembly for a file
+Administracion_Discos/mount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.s
+.PHONY : Administracion_Discos/mount.cpp.s
 
 Administracion_Discos/rmdisk.o: Administracion_Discos/rmdisk.cpp.o
 .PHONY : Administracion_Discos/rmdisk.o
@@ -297,6 +369,30 @@ Reportes/name.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.s
 .PHONY : Reportes/name.cpp.s
 
+Script/exec.o: Script/exec.cpp.o
+.PHONY : Script/exec.o
+
+# target to build an object file
+Script/exec.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o
+.PHONY : Script/exec.cpp.o
+
+Script/exec.i: Script/exec.cpp.i
+.PHONY : Script/exec.i
+
+# target to preprocess a source file
+Script/exec.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.i
+.PHONY : Script/exec.cpp.i
+
+Script/exec.s: Script/exec.cpp.s
+.PHONY : Script/exec.s
+
+# target to generate assembly for a file
+Script/exec.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.s
+.PHONY : Script/exec.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -330,12 +426,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MIA_Proyecto1_201709450"
-	@echo "... Administracion_Carpetas/chmod.o"
-	@echo "... Administracion_Carpetas/chmod.i"
-	@echo "... Administracion_Carpetas/chmod.s"
+	@echo "... Administracion_Carpetas_y_Permisos/chmod.o"
+	@echo "... Administracion_Carpetas_y_Permisos/chmod.i"
+	@echo "... Administracion_Carpetas_y_Permisos/chmod.s"
+	@echo "... Administracion_Carpetas_y_Permisos/pause.o"
+	@echo "... Administracion_Carpetas_y_Permisos/pause.i"
+	@echo "... Administracion_Carpetas_y_Permisos/pause.s"
+	@echo "... Administracion_Discos/fdisk.o"
+	@echo "... Administracion_Discos/fdisk.i"
+	@echo "... Administracion_Discos/fdisk.s"
 	@echo "... Administracion_Discos/mkdisk.o"
 	@echo "... Administracion_Discos/mkdisk.i"
 	@echo "... Administracion_Discos/mkdisk.s"
+	@echo "... Administracion_Discos/mount.o"
+	@echo "... Administracion_Discos/mount.i"
+	@echo "... Administracion_Discos/mount.s"
 	@echo "... Administracion_Discos/rmdisk.o"
 	@echo "... Administracion_Discos/rmdisk.i"
 	@echo "... Administracion_Discos/rmdisk.s"
@@ -351,6 +456,9 @@ help:
 	@echo "... Reportes/name.o"
 	@echo "... Reportes/name.i"
 	@echo "... Reportes/name.s"
+	@echo "... Script/exec.o"
+	@echo "... Script/exec.i"
+	@echo "... Script/exec.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

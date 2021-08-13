@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkdisk.cpp
+mkdisk.h
+/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkdisk.h
+
 /home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkdisk.h
 vector
 -
@@ -16,30 +20,12 @@ iostream
 sstream
 -
 algorithm
--
-stdio.h
 -
 ../Discos/estructuras.h
 /home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.h
 cstring
 -
-
-/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador /Interprete.cpp
-Interprete.h
-/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador /Interprete.h
-
-/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador /Interprete.h
-../Administracion Discos/mkdisk.h
-/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkdisk.h
-vector
--
-string
--
-iostream
--
-sstream
--
-algorithm
+filesystem
 -
 
 /home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.h

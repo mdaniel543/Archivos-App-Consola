@@ -1,2 +1,0 @@
-Mkdisk -Size=3000 –u=K -path="/home/daniel/Escritorio/Discos/Disco1.disk"
-

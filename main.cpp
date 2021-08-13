@@ -4,8 +4,8 @@ using namespace std;
 
 int main() {
     cout << " BIENVENIDO " << endl;
-    Interprete interprete;
-    interprete.interpretar();
+    Interprete* interprete = new Interprete(false);
+    interprete->interpretar();
     return 0;
 }
 

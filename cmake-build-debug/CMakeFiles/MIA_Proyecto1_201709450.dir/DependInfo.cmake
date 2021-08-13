@@ -8,13 +8,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Carpetas/chmod.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas/chmod.cpp.o"
+  "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Carpetas y Permisos/chmod.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/chmod.cpp.o"
+  "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Carpetas y Permisos/pause.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.cpp.o"
+  "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/fdisk.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.o"
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkdisk.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.o"
+  "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mount.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o"
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/rmdisk.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o"
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Usuarios/login.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.o"
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador /Interprete.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.o"
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o"
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/name.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o"
+  "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o"
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/main.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

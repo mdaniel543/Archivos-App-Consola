@@ -10,9 +10,9 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
-#include <stdio.h>
 #include "../Discos/estructuras.h"
 #include <cstring>
+#include <filesystem>
 
 using namespace std;
 
@@ -20,6 +20,8 @@ class mkdisk {
 public:
     mkdisk(vector<string> parametros);
     void crearDisco();
+    void CrearRuta();
+    bool punto(string cadena);
     string ToLower(string cadena);
 
 private:

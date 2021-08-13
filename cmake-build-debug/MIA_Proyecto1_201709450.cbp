@@ -82,16 +82,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Carpetas/chmod.cpp">
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Carpetas y Permisos/chmod.cpp">
 			<Option target="MIA_Proyecto1_201709450"/>
 		</Unit>
-		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Carpetas/chmod.h">
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Carpetas y Permisos/chmod.h">
+			<Option target="MIA_Proyecto1_201709450"/>
+		</Unit>
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Carpetas y Permisos/pause.cpp">
+			<Option target="MIA_Proyecto1_201709450"/>
+		</Unit>
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Carpetas y Permisos/pause.h">
+			<Option target="MIA_Proyecto1_201709450"/>
+		</Unit>
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/fdisk.cpp">
+			<Option target="MIA_Proyecto1_201709450"/>
+		</Unit>
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/fdisk.h">
 			<Option target="MIA_Proyecto1_201709450"/>
 		</Unit>
 		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkdisk.cpp">
 			<Option target="MIA_Proyecto1_201709450"/>
 		</Unit>
 		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkdisk.h">
+			<Option target="MIA_Proyecto1_201709450"/>
+		</Unit>
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mount.cpp">
+			<Option target="MIA_Proyecto1_201709450"/>
+		</Unit>
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mount.h">
 			<Option target="MIA_Proyecto1_201709450"/>
 		</Unit>
 		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/rmdisk.cpp">
@@ -122,6 +140,12 @@
 			<Option target="MIA_Proyecto1_201709450"/>
 		</Unit>
 		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/name.h">
+			<Option target="MIA_Proyecto1_201709450"/>
+		</Unit>
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.cpp">
+			<Option target="MIA_Proyecto1_201709450"/>
+		</Unit>
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.h">
 			<Option target="MIA_Proyecto1_201709450"/>
 		</Unit>
 		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/main.cpp">
