@@ -37,17 +37,18 @@ void mkdisk::crearDisco() {
     this->CrearRuta();
     FILE  *archivo = fopen(path.c_str(), "r");
     if(archivo != NULL){
-        cout<<"Ya existe el disco"<<endl;
-        return;//error
+        cout << endl <<"---ERROR: Ya existe el disco----"<<endl;
+        return;
     }
     int tam;
     if(this->u == "k"){ //kb
         tam =  this->size * 1024;
-    }
-    else{ //mb
+    }else if(this->u == "m"){ //mb
         tam =  this->size * 1024 * 1024;
+    }else{
+        cout << endl << "---UNIDADES DE SIZE INCORRECTAS---" << endl;
     }
-    cout << size << endl;
+    cout << tam << endl;
     archivo =fopen(this->path.c_str(),"wb");
     fwrite("\0",1,1,archivo);
     fseek(archivo,tam,SEEK_SET);
@@ -64,11 +65,18 @@ void mkdisk::crearDisco() {
     cout << ine.mbr_fecha_creacion << endl;
     ine.mbr_disk_signature = rand() % 100; // dato para la etiqueta del disco
     // verificamos el FIT
-    if(this->f.empty()==true){
-        strcpy( ine.disk_fit,"F");
+    if(this->f.empty()){
+        ine.disk_fit = 'f';
+    }else if(this->f[0] == 'b'){
+        ine.disk_fit = 'b';
+    }else if(this->f[0] == 'f'){
+        ine.disk_fit = 'f';
+    }else if (this->f[0] == 'w'){
+        ine.disk_fit = 'w';
     }else{
-        strcpy(ine.disk_fit, this->f.c_str());
+        cout << endl << "----ERROR EN LA CONFIGURACION DEL DISCO---" << endl;
     }
+    cout << f.c_str() << endl;
     // CREAMOS LAS 4 PARTICIONES
     particion vacia;
     vacia.part_status= '0';//status inactivo
@@ -78,15 +86,14 @@ void mkdisk::crearDisco() {
     vacia.part_size= -1;
     vacia.part_name[0] = '\0';
     //lleno el disco de las 4 particiones
-    for(int i = 0 ; i < 4 ; i ++)
+    for(int i = 0 ; i < 4 ; i ++){
         ine.mbr_partitions[i] = vacia;
-
+    }
     //cout << "Nuevo disco: \nSize: " << ine.mbr_tamano << "\ndate: " << ine.mbr_fecha_creacion << "\nFit: " << ine.disk_fit << "\nDisk_Signature: " << ine.mbr_disk_signature << endl;
     //cout << "Bits del MBR: " << sizeof(mbr) << endl;
 
     //MBR al disco
     //archivo = fopen(this->path.c_str(), "rb+"); //modo de escritura mixto permite actualizar un fichero sin borrar el contenido anterior
-
     fseek(archivo,0,SEEK_SET);
     fwrite(&ine, sizeof(mbr), 1, archivo);
     fclose(archivo);

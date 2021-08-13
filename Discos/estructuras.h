@@ -19,9 +19,18 @@ typedef struct{
     int mbr_tamano;
     char mbr_fecha_creacion[20];
     int mbr_disk_signature;
-    char disk_fit[1];
+    char disk_fit;
     particion mbr_partitions[4];
 }mbr;
+
+typedef struct{
+    char part_status;
+    char part_fit;
+    int part_start;
+    int part_size;
+    int part_next;
+    char part_name[16];
+}extended;
 
 
 class estructuras {

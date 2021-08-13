@@ -82,7 +82,7 @@ void Interprete::ReconocerComando(string comando, vector<string> parametros ){
         cout << "hola fdisk" << endl;
         cout << "----------" << endl;
         fdisk* nuevo = new fdisk(parametros);
-        nuevo->printDisco();
+        nuevo->CrearParticion();
     }
     else if(comando == "pause"){
         if (script){

@@ -11,6 +11,8 @@
 #include <sstream>
 #include <algorithm>
 #include "../Discos/estructuras.h"
+#include <cstring>
+#include <filesystem>
 
 using namespace std;
 
@@ -18,7 +20,12 @@ class fdisk {
 public:
     fdisk(vector<string> parametros);
     void CrearParticion();
-    void printDisco();
+    void printDisco(FILE* arch);
+    void validarDisco(particion part);
+    void particionPrimaria(FILE *file, particion particionu, mbr Disk);
+    void particionExtendida(FILE *file, particion particionu, mbr Disk);
+    void particionLogica(FILE *file, particion particionu, mbr Disk);
+    int fitDisk(mbr Disk);
     string ToLower(string cadena);
 private :
     int size;
