@@ -11,9 +11,6 @@ fdisk::fdisk(vector<string> parametros) {
         getline(input_stringstream, name, '=');
         getline(input_stringstream, info, '=');
         name = ToLower(name);
-        cout << name << endl;
-        cout << info << endl;
-        cout << "----------" << endl;
         if (name == "-path"){
             path = info;
         }
@@ -132,7 +129,7 @@ void fdisk::validarDisco(particion part) {
         return;
     }
     if (disponible < part.part_size){
-        cout << endl << "-- EL DISCO NO TIENE ESPACIO PARA ESTA PARTICION --" << endl;
+        cout << endl << "-- EL DISCO NO TIENE ESPACIO DISPONIBLE PARA ESTA PARTICION --" << endl;
         return;
     }
     if (existeExtendida){
@@ -162,14 +159,30 @@ void fdisk::validarDisco(particion part) {
 void fdisk::particionPrimaria(FILE *file, particion particionu, mbr Disk) {
     switch (fitDisk(Disk)) {
         case 1: // BEST FIT
+
             break;
         case 2: // FIRST FIT
+            for (int i = 0; i < 4; ++i) {
+                if (Disk.mbr_partitions[i].part_status == '0'){
+                    if (i == 0){ //
+                        particionu.part_start = sizeof(mbr);
+                        Disk.mbr_partitions[i] = particionu;
+                        break;
+                    }else{
+                        particionu.part_start = Disk.mbr_partitions[i - 1].part_start + Disk.mbr_partitions[i - 1].part_size;
+                        Disk.mbr_partitions[i] = particionu;
+                        break;
+                    }
+                }
+            }
             break;
         case 3: //  WORST FIT
             break;
         default:
             break;
     }
+    rewind(file);
+    fwrite(&Disk, sizeof(mbr), 1, file);
 }
 
 void fdisk::particionExtendida(FILE *file, particion particionu, mbr Disk) {
@@ -186,16 +199,12 @@ void fdisk::particionExtendida(FILE *file, particion particionu, mbr Disk) {
 }
 
 void fdisk::particionLogica(FILE *file, particion particionu, mbr Disk) {
-    switch (fitDisk(Disk)) {
-        case 1: // BEST FIT
-            break;
-        case 2: // FIRST FIT
-            break;
-        case 3: //  WORST FIT
-            break;
-        default:
-            break;
-    }
+    ebr particionE;
+    particionE.part_status = particionu.part_status;
+    particionE.part_fit = particionu.part_fit;
+    particionE.part_start = particionu.part_start;
+    particionE.part_size = particionu.part_size;
+    strcpy(particionE.part_name, particionu.part_name);
 }
 
 
@@ -210,7 +219,7 @@ void fdisk::printDisco(FILE* arch) {
     cout << "FECHA: "<< MBR.mbr_fecha_creacion << endl;
     cout << "FIT: " << MBR.disk_fit << endl;
     for(int i=0;i<4;i++){
-        cout << "PARTICION : "<< i << endl;
+        cout << "PARTICION : "<< i + 1 << endl;
         cout << "PARTICION STATUS : "<< MBR.mbr_partitions[i].part_status << endl;
         cout << "PARTICION TYPE : "<< MBR.mbr_partitions[i].part_type << endl;
         cout << "PARTICION FIT : "<< MBR.mbr_partitions[i].part_fit << endl;

@@ -30,7 +30,7 @@ typedef struct{
     int part_size;
     int part_next;
     char part_name[16];
-}extended;
+}ebr;
 
 
 class estructuras {

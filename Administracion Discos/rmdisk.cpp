@@ -15,10 +15,10 @@ rmdisk::rmdisk(string parametro) {
 void rmdisk::borrarDisco() {
     if (remove(path.c_str()) == 0)
     {
-        cout << "Disco eliminado exitosamente." << endl;
+        cout << endl <<"--- DISCO ELIMINADO EXITOSAMENTE ---" << endl;
     }
     else
     {
-        cout << "Disco no existente" << endl;
+        cout << endl <<"-- DISCO NO ENCONTRADO -- " << endl;
     }
 }

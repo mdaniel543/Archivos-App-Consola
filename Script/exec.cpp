@@ -26,6 +26,5 @@ void exec::leerArchivo() {
             }
         }
     }
-    cout << "==============" << endl;
 }
 

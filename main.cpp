@@ -1,11 +1,17 @@
 #include "Analizador /Interprete.h"
+#include <cstdlib>
+#include <sstream>
 
 using namespace std;
 
-int main() {
-    cout << " BIENVENIDO " << endl;
+int main(int argc, char *argv[]) {
     Interprete* interprete = new Interprete(false);
-    interprete->interpretar();
+    /*stringstream comando;
+    for (int i = 1; i < argc; ++i) {
+        comando << argv[i] << " ";
+    }
+    interprete->SepararComando(comando.str());*/
+    interprete->SepararComando("exec -path=/home/daniel/Escritorio/prueba.sh");
     return 0;
 }
 

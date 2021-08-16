@@ -9,14 +9,9 @@ mkdisk::mkdisk(vector<string> parametros) {
     for (string param : parametros){
         stringstream input_stringstream(param);
         string name, info;
-
         getline(input_stringstream, name, '=');
         getline(input_stringstream, info, '=');
         name = ToLower(name);
-        cout << name << endl;
-        cout << info << endl;
-        cout << "----------" << endl;
-
         if (name == "-path"){
             path = info;
         }
@@ -97,7 +92,7 @@ void mkdisk::crearDisco() {
     fseek(archivo,0,SEEK_SET);
     fwrite(&ine, sizeof(mbr), 1, archivo);
     fclose(archivo);
-    printf("DISCO CREADO CORRECTAMENTE \nSE AGREGO EL MBR DE MANERA CORRECTA\n");
+    printf(" -- DISCO CREADO CORRECTAMENTE --  \nSE AGREGO EL MBR DE MANERA CORRECTA\n");
 }
 
 string mkdisk::ToLower(string cadena) {
