@@ -45,8 +45,7 @@ void Interprete::ReconocerComando(string comando, vector<string> parametros ){
         rmdisk* nuevo = new rmdisk(parametros[0]);
         nuevo->borrarDisco();
     }else if(comando == "fdisk"){
-        fdisk* nuevo = new fdisk(parametros);
-        nuevo->CrearParticion();
+        new fdisk(parametros);
     }
     else if(comando == "pause"){
         if (script){

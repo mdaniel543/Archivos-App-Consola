@@ -24,8 +24,9 @@ public:
     void validarDisco(particion part);
     void particionPrimaria(FILE *file, particion particionu, mbr Disk);
     void particionExtendida(FILE *file, particion particionu, mbr Disk);
-    void particionLogica(FILE *file, particion particionu, mbr Disk);
-    int fitDisk(mbr Disk);
+    void particionLogica(FILE *file, particion particionu, mbr Disk, particion Extendida);
+    int fitex(char fit);
+    void deleteParticion();
     string ToLower(string cadena);
 private :
     int size;

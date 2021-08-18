@@ -71,7 +71,6 @@ void mkdisk::crearDisco() {
     }else{
         cout << endl << "----ERROR EN LA CONFIGURACION DEL DISCO---" << endl;
     }
-    cout << f.c_str() << endl;
     // CREAMOS LAS 4 PARTICIONES
     particion vacia;
     vacia.part_status= '0';//status inactivo
