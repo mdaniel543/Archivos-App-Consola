@@ -15,7 +15,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mount.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o"
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/rmdisk.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o"
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Usuarios/login.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.o"
-  "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador /Interprete.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.o"
+  "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o"
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o"
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/name.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o"
   "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.cpp" "/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o"

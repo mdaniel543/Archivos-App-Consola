@@ -297,29 +297,29 @@ Administracion_Usuarios/login.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.s
 .PHONY : Administracion_Usuarios/login.cpp.s
 
-Analizador_/Interprete.o: Analizador_/Interprete.cpp.o
-.PHONY : Analizador_/Interprete.o
+Analizador/Interprete.o: Analizador/Interprete.cpp.o
+.PHONY : Analizador/Interprete.o
 
 # target to build an object file
-Analizador_/Interprete.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.o
-.PHONY : Analizador_/Interprete.cpp.o
+Analizador/Interprete.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o
+.PHONY : Analizador/Interprete.cpp.o
 
-Analizador_/Interprete.i: Analizador_/Interprete.cpp.i
-.PHONY : Analizador_/Interprete.i
+Analizador/Interprete.i: Analizador/Interprete.cpp.i
+.PHONY : Analizador/Interprete.i
 
 # target to preprocess a source file
-Analizador_/Interprete.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.i
-.PHONY : Analizador_/Interprete.cpp.i
+Analizador/Interprete.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.i
+.PHONY : Analizador/Interprete.cpp.i
 
-Analizador_/Interprete.s: Analizador_/Interprete.cpp.s
-.PHONY : Analizador_/Interprete.s
+Analizador/Interprete.s: Analizador/Interprete.cpp.s
+.PHONY : Analizador/Interprete.s
 
 # target to generate assembly for a file
-Analizador_/Interprete.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.s
-.PHONY : Analizador_/Interprete.cpp.s
+Analizador/Interprete.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.s
+.PHONY : Analizador/Interprete.cpp.s
 
 Discos/estructuras.o: Discos/estructuras.cpp.o
 .PHONY : Discos/estructuras.o
@@ -447,9 +447,9 @@ help:
 	@echo "... Administracion_Usuarios/login.o"
 	@echo "... Administracion_Usuarios/login.i"
 	@echo "... Administracion_Usuarios/login.s"
-	@echo "... Analizador_/Interprete.o"
-	@echo "... Analizador_/Interprete.i"
-	@echo "... Analizador_/Interprete.s"
+	@echo "... Analizador/Interprete.o"
+	@echo "... Analizador/Interprete.i"
+	@echo "... Analizador/Interprete.s"
 	@echo "... Discos/estructuras.o"
 	@echo "... Discos/estructuras.i"
 	@echo "... Discos/estructuras.s"

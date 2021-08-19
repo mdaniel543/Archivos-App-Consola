@@ -152,12 +152,16 @@ void fdisk::validarDisco(particion part) {
                 return;
             }
             while (aux.part_next != -1){
-                contador += aux.part_size;
+                if (aux.part_status != '0'){
+                    contador += aux.part_size;
+                }
                 fseek(file, aux.part_next, SEEK_SET);
                 fread(&aux, sizeof(ebr), 1, file);
             }
             if (aux.part_size != -1){
-                contador += aux.part_size;
+                if (aux.part_status != '0'){
+                    contador += aux.part_size;
+                }
                 contador = auxE.part_size - contador;
                 if (part.part_size > contador){
                     cout << endl << "--- YA NO HAY ESPACIO EN LA EXTENDIDA PARA ESTA PARTICION LOGICA ---" << endl;
@@ -265,12 +269,16 @@ void fdisk::particionLogica(FILE *file, particion particionu, mbr Disk, particio
         case 2:
             particionE.part_next = -1;
             while(aux.part_next != -1){
+                if (aux.part_status == '0'){
+                    particionE.part_next = aux.part_next;
+                    break;
+                }
                 fseek(file, aux.part_next, SEEK_SET);
                 fread(&aux, sizeof(ebr), 1, file);
             }
-            if (aux.part_size == -1){
+            if (aux.part_size == -1 || aux.part_status == '0'){
                 particionE.part_start = aux.part_start;
-                fseek(file, Extendida.part_start, SEEK_SET);
+                fseek(file, aux.part_start - sizeof(ebr), SEEK_SET);
                 fwrite(&particionE, sizeof(ebr), 1, file);
             }else{
                 particionE.part_start = aux.part_start + aux.part_size + sizeof(ebr);
@@ -298,6 +306,7 @@ void fdisk::deleteParticion() {
         return;
     }
     mbr MBR;
+    int pos;
     fseek(file, 0, SEEK_SET);
     fread(&MBR, sizeof(mbr), 1, file); // Se recupera lo que hay en el archivo en MBR, del tamaño del struct mbr
     ebr aux;
@@ -308,6 +317,7 @@ void fdisk::deleteParticion() {
     for (int i = 0; i < 4; ++i) {
         if (MBR.mbr_partitions[i].part_name == this->name){
             pe = true;
+            pos = i;
             auxp = MBR.mbr_partitions[i];
             break;
         }
@@ -317,6 +327,7 @@ void fdisk::deleteParticion() {
             do{
                 if(aux.part_name == this->name){
                     l = true;
+                    auxp = MBR.mbr_partitions[i];
                     break;
                 }
                 if (aux.part_next > 0){
@@ -333,24 +344,55 @@ void fdisk::deleteParticion() {
         }
     }
     if (!pe && !l){
-        cout << endl << "-- NO EXISTE LA PARTICION EN EL DISCO --" << endl ;
+        cout << endl << "-- NO EXISTE LA PARTICION EN EL DISCO --" << endl << endl;
         return;
     }
     string respuesta;
-    while(respuesta != "s" || respuesta != "n"){
-        cout << "Seguro que deseas eliminar la particion? [s/n]" << endl;
+    cout << endl << "......................................................" << endl;
+    while(!(respuesta == "s" || respuesta == "n")){
+        cout << "Seguro que deseas eliminar esta particion? [s/n]" << endl;
         cin >> respuesta;
     }
+    cout << "......................................................" << endl << endl;
     if (respuesta == "n"){
-        cout << "-- ACCION DEL COMANDO CANCELADO --" << endl;
+        cout << "----- ACCION DEL COMANDO CANCELADO -----" << endl << endl;
         return;
     }
     if (l){ // si la particion es logica
+        if (this->del == "fast" || this->del == "full"){
+            cout << "Particion logica eliminada: " << aux.part_name <<  endl;
+            aux.part_status = '0'; // LISTO :) PARTICION ELIMINADA
+            fseek(file, aux.part_start - sizeof(ebr), SEEK_SET);
+            fwrite(&aux, sizeof(ebr), 1, file);
+        }else{
+            cout << "--VALOR DELETE INCORRECTO--" << endl << endl;
+            return;
+        }
 
     }
     if(pe){ // si la particion es primario o extendida
-
+        if (this->del == "fast"){
+            auxp.part_status = '0';
+            MBR.mbr_partitions[pos] = auxp;
+            fseek(file, 0, SEEK_SET);
+            fwrite(&MBR, sizeof(mbr), 1, file);
+        }else if(this->del == "full"){
+            auxp.part_status = '0';
+            auxp.part_type = '\0';
+            auxp.part_fit = '\0';
+            auxp.part_start = '\0';
+            auxp.part_size = '\0';
+            strcpy(auxp.part_name, "");
+            MBR.mbr_partitions[pos] = auxp;
+            fseek(file, 0, SEEK_SET);
+            fwrite(&MBR, sizeof(mbr), 1, file);
+        }else{
+            cout << "--VALOR DELETE INCORRECTO--" << endl << endl;
+            return;
+        }
+        cout << "Particion a eliminada " << auxp.part_name << " de tipo:" << auxp.part_type <<endl;
     }
+    this->printDisco(file);
 }
 
 void fdisk::printDisco(FILE* arch) {
@@ -365,6 +407,9 @@ void fdisk::printDisco(FILE* arch) {
     cout << "FECHA: "<< MBR.mbr_fecha_creacion << endl;
     cout << "FIT: " << MBR.disk_fit << endl;
     for (int i = 0; i < 4; ++i) {
+        /*if (MBR.mbr_partitions[i].part_status == '0'){
+            continue;
+        }*/
         cout << "PARTICION : "<< i + 1 << endl;
         cout << "PARTICION STATUS : "<< MBR.mbr_partitions[i].part_status << endl;
         cout << "PARTICION TYPE : "<< MBR.mbr_partitions[i].part_type << endl;
@@ -378,9 +423,11 @@ void fdisk::printDisco(FILE* arch) {
             cout << "---------------------" << endl;
             cout << "EBR" << endl;
             do{
-                cout << "\tNAME " << aux.part_name << endl;
-                cout << "\tSIZE " << aux.part_size << endl;
-                cout << "\tNEXT " << aux.part_next << endl;
+                if (aux.part_status != '0'){
+                    cout << "\tNAME " << aux.part_name << endl;
+                    cout << "\tSIZE " << aux.part_size << endl;
+                    cout << "\tNEXT " << aux.part_next << endl;
+                }
                 if (aux.part_next > 0){
                     fseek(arch, aux.part_next, SEEK_SET);
                     fread(&aux, sizeof(ebr), 1, arch);

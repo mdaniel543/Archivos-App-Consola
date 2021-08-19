@@ -17,20 +17,22 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.o: \
  ../Discos/estructuras.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o: \
  ../Administracion\ Discos/mount.cpp \
- ../Administracion\ Discos/mount.h
+ ../Administracion\ Discos/mount.h \
+ ../Discos/estructuras.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o: \
  ../Administracion\ Discos/rmdisk.cpp \
  ../Administracion\ Discos/rmdisk.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.o: \
  ../Administracion\ Usuarios/login.cpp \
  ../Administracion\ Usuarios/login.h
-CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.o: \
+CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o: \
  ../Administracion\ Carpetas\ y\ Permisos/pause.h \
  ../Administracion\ Discos/fdisk.h \
  ../Administracion\ Discos/mkdisk.h \
+ ../Administracion\ Discos/mount.h \
  ../Administracion\ Discos/rmdisk.h \
- ../Analizador\ /Interprete.cpp \
- ../Analizador\ /Interprete.h \
+ ../Analizador/Interprete.cpp \
+ ../Analizador/Interprete.h \
  ../Discos/estructuras.h \
  ../Script/exec.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o: \
@@ -43,8 +45,9 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o: \
  ../Administracion\ Carpetas\ y\ Permisos/pause.h \
  ../Administracion\ Discos/fdisk.h \
  ../Administracion\ Discos/mkdisk.h \
+ ../Administracion\ Discos/mount.h \
  ../Administracion\ Discos/rmdisk.h \
- ../Analizador\ /Interprete.h \
+ ../Analizador/Interprete.h \
  ../Discos/estructuras.h \
  ../Script/exec.cpp \
  ../Script/exec.h
@@ -52,8 +55,9 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o: \
  ../Administracion\ Carpetas\ y\ Permisos/pause.h \
  ../Administracion\ Discos/fdisk.h \
  ../Administracion\ Discos/mkdisk.h \
+ ../Administracion\ Discos/mount.h \
  ../Administracion\ Discos/rmdisk.h \
- ../Analizador\ /Interprete.h \
+ ../Analizador/Interprete.h \
  ../Discos/estructuras.h \
  ../Script/exec.h \
  ../main.cpp

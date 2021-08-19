@@ -5,7 +5,7 @@
 #ifndef MIA_PROYECTO1_201709450_EXEC_H
 #define MIA_PROYECTO1_201709450_EXEC_H
 
-#include "../Analizador /Interprete.h"
+#include "../Analizador/Interprete.h"
 
 #include <string>
 #include <vector>

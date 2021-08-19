@@ -46,10 +46,14 @@ void Interprete::ReconocerComando(string comando, vector<string> parametros ){
         nuevo->borrarDisco();
     }else if(comando == "fdisk"){
         new fdisk(parametros);
+    }else if(comando == "mount"){
+        this->ParametrosMount(parametros);
+    }else if(comando == "umount"){
+        this->ParametrosUmount(parametros);
     }
     else if(comando == "pause"){
         if (script){
-            pause* nuevo = new pause();
+            new pause();
         }else{
             cout << "---El comando PAUSE solo funciona en el script-----" << endl;
         }
@@ -105,6 +109,46 @@ vector<string> Interprete::ReconocerComilla(vector<string> ant) {
         }
     }
     return regreso;
+}
+//QUMEADO LA LISTAS DE LAS MONTADAS
+void Interprete::ParametrosMount(vector<string> parametros) {
+    string path, nombre;
+    for (string param : parametros){
+        stringstream input_stringstream(param);
+        string name, info;
+        getline(input_stringstream, name, '=');
+        getline(input_stringstream, info, '=');
+        name = ToLower(name);
+        if (name == "-path"){
+            path = info;
+        }else if(name == "-name"){
+            nombre = info;
+        }
+    }
+    if (path.empty() || nombre.empty()){
+        cout << endl << "-- FALTA PARAMETROS PARA EL COMANDO MOUNT --" << endl;
+        return;
+    }
+    this->montar.montarParticion(path, nombre);
+}
+
+void Interprete::ParametrosUmount(vector<string> parametros) {
+    string id;
+    for (string param : parametros){
+        stringstream input_stringstream(param);
+        string name, info;
+        getline(input_stringstream, name, '=');
+        getline(input_stringstream, info, '=');
+        name = ToLower(name);
+        if (name == "-id"){
+            id = info;
+        }
+    }
+    if (id.empty()){
+        cout << endl << "-- FALTA PARAMETROS PARA EL COMANDO UMOUNT --" << endl;
+        return;
+    }
+    this->montar.desmontarParticion(id);
 }
 
 

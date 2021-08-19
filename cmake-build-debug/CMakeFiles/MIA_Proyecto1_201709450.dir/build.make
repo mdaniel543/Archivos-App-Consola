@@ -131,18 +131,18 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/name.cpp -o CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.s
 
-CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
-CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.o: ../Analizador\ /Interprete.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.o -c "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador /Interprete.cpp"
+CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
+CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o: ../Analizador/Interprete.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o -c /home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.cpp
 
-CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador /Interprete.cpp" > CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.i
+CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.cpp > CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.i
 
-CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador /Interprete.cpp" -o CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.s
+CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.cpp -o CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.s
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
 CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o: ../Discos/estructuras.cpp
@@ -229,7 +229,7 @@ MIA_Proyecto1_201709450_OBJECTS = \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/chmod.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o" \
-"CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.o" \
+"CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o" \
@@ -245,7 +245,7 @@ MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_D
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/chmod.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o
-MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador_/Interprete.cpp.o
+MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o

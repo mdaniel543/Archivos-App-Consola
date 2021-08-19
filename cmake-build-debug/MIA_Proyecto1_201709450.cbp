@@ -124,10 +124,10 @@
 		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Usuarios/login.h">
 			<Option target="MIA_Proyecto1_201709450"/>
 		</Unit>
-		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador /Interprete.cpp">
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.cpp">
 			<Option target="MIA_Proyecto1_201709450"/>
 		</Unit>
-		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador /Interprete.h">
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.h">
 			<Option target="MIA_Proyecto1_201709450"/>
 		</Unit>
 		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.cpp">

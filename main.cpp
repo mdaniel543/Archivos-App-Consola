@@ -1,4 +1,4 @@
-#include "Analizador /Interprete.h"
+#include "Analizador/Interprete.h"
 #include <cstdlib>
 #include <sstream>
 
