@@ -26,17 +26,18 @@ public:
     void particionExtendida(FILE *file, particion particionu, mbr Disk);
     void particionLogica(FILE *file, particion particionu, mbr Disk, particion Extendida);
     int fitex(char fit);
+    void modificarParticion();
     void deleteParticion();
     string ToLower(string cadena);
 private :
-    int size;
+    int size = 0;
     string u;
     string path;
     string type;
     string fit;
     string del;
     string name;
-    string add;
+    int add = 0;
 };
 
 

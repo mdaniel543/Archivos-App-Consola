@@ -225,6 +225,30 @@ Administracion_Discos/mkdisk.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.s
 .PHONY : Administracion_Discos/mkdisk.cpp.s
 
+Administracion_Discos/mkfs.o: Administracion_Discos/mkfs.cpp.o
+.PHONY : Administracion_Discos/mkfs.o
+
+# target to build an object file
+Administracion_Discos/mkfs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o
+.PHONY : Administracion_Discos/mkfs.cpp.o
+
+Administracion_Discos/mkfs.i: Administracion_Discos/mkfs.cpp.i
+.PHONY : Administracion_Discos/mkfs.i
+
+# target to preprocess a source file
+Administracion_Discos/mkfs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.i
+.PHONY : Administracion_Discos/mkfs.cpp.i
+
+Administracion_Discos/mkfs.s: Administracion_Discos/mkfs.cpp.s
+.PHONY : Administracion_Discos/mkfs.s
+
+# target to generate assembly for a file
+Administracion_Discos/mkfs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.s
+.PHONY : Administracion_Discos/mkfs.cpp.s
+
 Administracion_Discos/mount.o: Administracion_Discos/mount.cpp.o
 .PHONY : Administracion_Discos/mount.o
 
@@ -272,6 +296,30 @@ Administracion_Discos/rmdisk.s: Administracion_Discos/rmdisk.cpp.s
 Administracion_Discos/rmdisk.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.s
 .PHONY : Administracion_Discos/rmdisk.cpp.s
+
+Administracion_Discos/umount.o: Administracion_Discos/umount.cpp.o
+.PHONY : Administracion_Discos/umount.o
+
+# target to build an object file
+Administracion_Discos/umount.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o
+.PHONY : Administracion_Discos/umount.cpp.o
+
+Administracion_Discos/umount.i: Administracion_Discos/umount.cpp.i
+.PHONY : Administracion_Discos/umount.i
+
+# target to preprocess a source file
+Administracion_Discos/umount.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.i
+.PHONY : Administracion_Discos/umount.cpp.i
+
+Administracion_Discos/umount.s: Administracion_Discos/umount.cpp.s
+.PHONY : Administracion_Discos/umount.s
+
+# target to generate assembly for a file
+Administracion_Discos/umount.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.s
+.PHONY : Administracion_Discos/umount.cpp.s
 
 Administracion_Usuarios/login.o: Administracion_Usuarios/login.cpp.o
 .PHONY : Administracion_Usuarios/login.o
@@ -438,12 +486,18 @@ help:
 	@echo "... Administracion_Discos/mkdisk.o"
 	@echo "... Administracion_Discos/mkdisk.i"
 	@echo "... Administracion_Discos/mkdisk.s"
+	@echo "... Administracion_Discos/mkfs.o"
+	@echo "... Administracion_Discos/mkfs.i"
+	@echo "... Administracion_Discos/mkfs.s"
 	@echo "... Administracion_Discos/mount.o"
 	@echo "... Administracion_Discos/mount.i"
 	@echo "... Administracion_Discos/mount.s"
 	@echo "... Administracion_Discos/rmdisk.o"
 	@echo "... Administracion_Discos/rmdisk.i"
 	@echo "... Administracion_Discos/rmdisk.s"
+	@echo "... Administracion_Discos/umount.o"
+	@echo "... Administracion_Discos/umount.i"
+	@echo "... Administracion_Discos/umount.s"
 	@echo "... Administracion_Usuarios/login.o"
 	@echo "... Administracion_Usuarios/login.i"
 	@echo "... Administracion_Usuarios/login.s"

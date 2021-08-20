@@ -17,30 +17,25 @@
 
 using namespace std;
 
+typedef struct{
+    int numero;
+    int estado = 0;
+    string nombre;
+    string id;
+}particionMontada;
+
+typedef struct{
+    int letra;
+    string path;
+    int estado;
+    particionMontada particiones[24];
+}DiscoMontado;
 
 class mount {
 public:
     mount();
-
-    typedef struct{
-        int numero;
-        int estado = 0;
-        string nombre;
-        string id;
-    }particionMontada;
-
-    typedef struct{
-        int letra;
-        string path;
-        int estado;
-        particionMontada particiones[24];
-    }DiscoMontado;
-
     void montarParticion(string path, string name);
-    void desmontarParticion(string id);
     void imprimirMontajes();
-
-private:
     int carnet = 50;
     int numeroparticion = 0;
     DiscoMontado discos[10];

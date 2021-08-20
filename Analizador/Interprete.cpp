@@ -49,7 +49,15 @@ void Interprete::ReconocerComando(string comando, vector<string> parametros ){
     }else if(comando == "mount"){
         this->ParametrosMount(parametros);
     }else if(comando == "umount"){
-        this->ParametrosUmount(parametros);
+        umount* nuevo = new umount(parametros);
+        nuevo->montadas = montar;
+        nuevo->desmontarParticion();
+        montar = nuevo->montadas;
+    }else if(comando == "mkfs"){
+        mkfs* nuevo = new mkfs(parametros);
+        nuevo->montadas = montar;
+        nuevo->formatearParticion();
+        montar = nuevo->montadas;
     }
     else if(comando == "pause"){
         if (script){
@@ -121,7 +129,9 @@ void Interprete::ParametrosMount(vector<string> parametros) {
         name = ToLower(name);
         if (name == "-path"){
             path = info;
-        }else if(name == "-name"){
+        }
+        info = ToLower(info);
+        if(name == "-name"){
             nombre = info;
         }
     }
@@ -131,24 +141,3 @@ void Interprete::ParametrosMount(vector<string> parametros) {
     }
     this->montar.montarParticion(path, nombre);
 }
-
-void Interprete::ParametrosUmount(vector<string> parametros) {
-    string id;
-    for (string param : parametros){
-        stringstream input_stringstream(param);
-        string name, info;
-        getline(input_stringstream, name, '=');
-        getline(input_stringstream, info, '=');
-        name = ToLower(name);
-        if (name == "-id"){
-            id = info;
-        }
-    }
-    if (id.empty()){
-        cout << endl << "-- FALTA PARAMETROS PARA EL COMANDO UMOUNT --" << endl;
-        return;
-    }
-    this->montar.desmontarParticion(id);
-}
-
-

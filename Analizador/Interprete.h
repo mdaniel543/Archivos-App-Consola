@@ -7,7 +7,9 @@
 
 #include "../Administracion Discos/mkdisk.h"
 #include "../Administracion Discos/mount.h"
+#include "../Administracion Discos/umount.h"
 #include "../Administracion Discos/rmdisk.h"
+#include "../Administracion Discos//mkfs.h"
 #include "../Script/exec.h"
 #include "../Administracion Carpetas y Permisos/pause.h"
 #include "../Administracion Discos/fdisk.h"
@@ -29,10 +31,10 @@ public:
     vector<string> ReconocerComilla(vector<string> ant);
     string ToLower(string cadena);
     void ParametrosMount(vector<string> parametros);
-    void ParametrosUmount(vector<string> parametros);
+    mount montar;
 private :
     bool script;
-    mount montar;
+
 };
 
 

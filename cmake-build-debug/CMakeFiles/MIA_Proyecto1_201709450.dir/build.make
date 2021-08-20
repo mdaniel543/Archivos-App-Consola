@@ -222,6 +222,32 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.s: cmake_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mount.cpp" -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.s
 
+CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
+CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o: ../Administracion\ Discos/mkfs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o -c "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkfs.cpp"
+
+CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkfs.cpp" > CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.i
+
+CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkfs.cpp" -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.s
+
+CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
+CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o: ../Administracion\ Discos/umount.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o -c "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/umount.cpp"
+
+CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/umount.cpp" > CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.i
+
+CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/umount.cpp" -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.s
+
 # Object files for target MIA_Proyecto1_201709450
 MIA_Proyecto1_201709450_OBJECTS = \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o" \
@@ -235,7 +261,9 @@ MIA_Proyecto1_201709450_OBJECTS = \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.o" \
-"CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o"
+"CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o" \
+"CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o" \
+"CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o"
 
 # External object files for target MIA_Proyecto1_201709450
 MIA_Proyecto1_201709450_EXTERNAL_OBJECTS =
@@ -252,9 +280,11 @@ MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o
+MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o
+MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/build.make
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable MIA_Proyecto1_201709450"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable MIA_Proyecto1_201709450"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MIA_Proyecto1_201709450.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

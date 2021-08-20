@@ -15,6 +15,11 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.o: \
  ../Administracion\ Discos/mkdisk.cpp \
  ../Administracion\ Discos/mkdisk.h \
  ../Discos/estructuras.h
+CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o: \
+ ../Administracion\ Discos/mkfs.cpp \
+ ../Administracion\ Discos/mkfs.h \
+ ../Administracion\ Discos/mount.h \
+ ../Discos/estructuras.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o: \
  ../Administracion\ Discos/mount.cpp \
  ../Administracion\ Discos/mount.h \
@@ -22,6 +27,11 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o: \
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o: \
  ../Administracion\ Discos/rmdisk.cpp \
  ../Administracion\ Discos/rmdisk.h
+CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o: \
+ ../Administracion\ Discos/mount.h \
+ ../Administracion\ Discos/umount.cpp \
+ ../Administracion\ Discos/umount.h \
+ ../Discos/estructuras.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.o: \
  ../Administracion\ Usuarios/login.cpp \
  ../Administracion\ Usuarios/login.h
@@ -29,8 +39,10 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o: \
  ../Administracion\ Carpetas\ y\ Permisos/pause.h \
  ../Administracion\ Discos/fdisk.h \
  ../Administracion\ Discos/mkdisk.h \
+ ../Administracion\ Discos/mkfs.h \
  ../Administracion\ Discos/mount.h \
  ../Administracion\ Discos/rmdisk.h \
+ ../Administracion\ Discos/umount.h \
  ../Analizador/Interprete.cpp \
  ../Analizador/Interprete.h \
  ../Discos/estructuras.h \
@@ -45,8 +57,10 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o: \
  ../Administracion\ Carpetas\ y\ Permisos/pause.h \
  ../Administracion\ Discos/fdisk.h \
  ../Administracion\ Discos/mkdisk.h \
+ ../Administracion\ Discos/mkfs.h \
  ../Administracion\ Discos/mount.h \
  ../Administracion\ Discos/rmdisk.h \
+ ../Administracion\ Discos/umount.h \
  ../Analizador/Interprete.h \
  ../Discos/estructuras.h \
  ../Script/exec.cpp \
@@ -55,8 +69,10 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o: \
  ../Administracion\ Carpetas\ y\ Permisos/pause.h \
  ../Administracion\ Discos/fdisk.h \
  ../Administracion\ Discos/mkdisk.h \
+ ../Administracion\ Discos/mkfs.h \
  ../Administracion\ Discos/mount.h \
  ../Administracion\ Discos/rmdisk.h \
+ ../Administracion\ Discos/umount.h \
  ../Analizador/Interprete.h \
  ../Discos/estructuras.h \
  ../Script/exec.h \

@@ -13,6 +13,17 @@ rmdisk::rmdisk(string parametro) {
 }
 
 void rmdisk::borrarDisco() {
+    string respuesta;
+    cout << endl << "......................................................" << endl;
+    while(!(respuesta == "s" || respuesta == "n")){
+        cout << "Seguro que deseas eliminar este disco? [s/n]" << endl;
+        cin >> respuesta;
+    }
+    cout << "......................................................" << endl << endl;
+    if (respuesta == "n"){
+        cout << "----- ACCION DEL COMANDO CANCELADO -----" << endl << endl;
+        return;
+    }
     if (remove(path.c_str()) == 0)
     {
         cout << endl <<"--- DISCO ELIMINADO EXITOSAMENTE ---" << endl;

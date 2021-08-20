@@ -5,6 +5,7 @@
 #include "fdisk.h"
 
 fdisk::fdisk(vector<string> parametros) {
+    bool ad = false, prim = false;
     for (string param : parametros){
         stringstream input_stringstream(param);
         string name, info;
@@ -28,13 +29,20 @@ fdisk::fdisk(vector<string> parametros) {
         }else if(name == "-name"){
             this->name = info;
         }else if(name == "-add"){
-            add = info;
+            add = stoi(info);
+            ad = true;
+            if (this->size != 0){
+                prim = true;
+            }
         }
     }
     if (!del.empty()){
         this->deleteParticion();
-    }else if(!add.empty()){
-
+    }else if(ad){
+        if (prim){
+            this->add = this->size;
+        }
+        this->modificarParticion();
     }else{
         this->CrearParticion();
     }
@@ -154,6 +162,12 @@ void fdisk::validarDisco(particion part) {
             while (aux.part_next != -1){
                 if (aux.part_status != '0'){
                     contador += aux.part_size;
+                }else{
+                    if (aux.part_size != -1){
+                        if (part.part_size > aux.part_size){
+                            contador += aux.part_size;
+                        }
+                    }
                 }
                 fseek(file, aux.part_next, SEEK_SET);
                 fread(&aux, sizeof(ebr), 1, file);
@@ -187,19 +201,59 @@ void fdisk::validarDisco(particion part) {
 }
 
 void fdisk::particionPrimaria(FILE *file, particion particionu, mbr Disk) {
+    bool sifunciono = false;
+    int auxu = -1;
     switch (fitex(Disk.disk_fit)) {
         case 1: // BEST FIT
+            int i;
+            for (i = 0; i < 4; ++i) {
+                if (Disk.mbr_partitions[i].part_status == '0'){
+                    if (Disk.mbr_partitions[i + 1].part_start != 1){
+                        int sizeRecuperado =  Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
+                        if (particionu.part_size >= sizeRecuperado){
+                            if (auxu > 0){
+                                if (sizeRecuperado <= auxu){
+                                    auxu = sizeRecuperado;
+                                }
+                            }else{
+                                auxu = sizeRecuperado;
+                            }
+                            sifunciono = true;
+                        }
+                    }
+                }
+            }
+            if (i == 0){
+                particionu.part_start = sizeof(mbr);
+            }else{
+                particionu.part_start = Disk.mbr_partitions[i - 1].part_start + Disk.mbr_partitions[i - 1].part_size;
+            }
+            Disk.mbr_partitions[i] = particionu;
             break;
         case 2: // FIRST FIT
             for (int i = 0; i < 4; ++i) {
                 if (Disk.mbr_partitions[i].part_status == '0'){
-                    if (i == 0){ //
+                    if (i == 0){
+                        if (Disk.mbr_partitions[i + 1].part_start != -1){
+                            int sizeRecuperado =  Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
+                            if (sizeRecuperado > particionu.part_size){
+                                continue;
+                            }
+                        }
                         particionu.part_start = sizeof(mbr);
                         Disk.mbr_partitions[i] = particionu;
+                        sifunciono = true;
                         break;
                     }else{
+                        if (Disk.mbr_partitions[i + 1].part_start != -1){
+                            int sizeRecuperado =  Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
+                            if (sizeRecuperado > particionu.part_size){
+                                continue;
+                            }
+                        }
                         particionu.part_start = Disk.mbr_partitions[i - 1].part_start + Disk.mbr_partitions[i - 1].part_size;
                         Disk.mbr_partitions[i] = particionu;
+                        sifunciono = true;
                         break;
                     }
                 }
@@ -210,11 +264,16 @@ void fdisk::particionPrimaria(FILE *file, particion particionu, mbr Disk) {
         default:
             break;
     }
+    if (!sifunciono){
+        cout << "-- NO SE HA PODIOD CREAR LA PARTICION --" << endl;
+        return;
+    }
     fseek(file, 0, SEEK_SET);
     fwrite(&Disk, sizeof(mbr), 1, file);
 }
 
 void fdisk::particionExtendida(FILE *file, particion particionu, mbr Disk) {
+    bool sifunciono = false;
     switch (fitex(Disk.disk_fit)) {
         case 1: // BEST FIT
             break;
@@ -222,12 +281,26 @@ void fdisk::particionExtendida(FILE *file, particion particionu, mbr Disk) {
             for (int i = 0; i < 4; ++i) {
                 if (Disk.mbr_partitions[i].part_status == '0'){
                     if (i == 0){ //
+                        if (Disk.mbr_partitions[i + 1].part_start != -1){
+                            int sizeRecuperado =  Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
+                            if (sizeRecuperado > particionu.part_size){
+                                continue;
+                            }
+                        }
                         particionu.part_start = sizeof(mbr);
                         Disk.mbr_partitions[i] = particionu;
+                        sifunciono = true;
                         break;
                     }else{
+                        if (Disk.mbr_partitions[i + 1].part_start != -1){
+                            int sizeRecuperado =  Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
+                            if (sizeRecuperado > particionu.part_size){
+                                continue;
+                            }
+                        }
                         particionu.part_start = Disk.mbr_partitions[i - 1].part_start + Disk.mbr_partitions[i - 1].part_size;
                         Disk.mbr_partitions[i] = particionu;
+                        sifunciono = true;
                         break;
                     }
                 }
@@ -237,6 +310,10 @@ void fdisk::particionExtendida(FILE *file, particion particionu, mbr Disk) {
             break;
         default:
             break;
+    }
+    if (!sifunciono){
+        cout << "-- NO SE HA PODIOD CREAR LA PARTICION --" << endl;
+        return;
     }
     //ACTUALIZO
     fseek(file, 0, SEEK_SET);
@@ -264,14 +341,17 @@ void fdisk::particionLogica(FILE *file, particion particionu, mbr Disk, particio
     fseek(file, Extendida.part_start, SEEK_SET);
     fread(&aux, sizeof(ebr), 1, file);
     switch (fitex(Extendida.part_fit)) {
-        case 1:
+        case 1: // BEST FIT
+
             break;
-        case 2:
+        case 2: // FIRST FIT
             particionE.part_next = -1;
             while(aux.part_next != -1){
                 if (aux.part_status == '0'){
-                    particionE.part_next = aux.part_next;
-                    break;
+                    if (aux.part_size > particionE.part_size){
+                        particionE.part_next = aux.part_next;
+                        break;
+                    }
                 }
                 fseek(file, aux.part_next, SEEK_SET);
                 fread(&aux, sizeof(ebr), 1, file);
@@ -291,7 +371,7 @@ void fdisk::particionLogica(FILE *file, particion particionu, mbr Disk, particio
                 fwrite(&aux, sizeof(ebr), 1, file);
             }
             break;
-        case 3:
+        case 3: // WORST FIT
             break;
         default:
             break;
@@ -395,6 +475,148 @@ void fdisk::deleteParticion() {
     this->printDisco(file);
 }
 
+void fdisk::modificarParticion() {
+    FILE *file;
+    file = fopen(this->path.c_str(), "rb+"); // Se abre con permisos mixtos
+    if (file == NULL) {
+        cout << endl <<"----ERROR: EL DISCO NO EXISTE-----" << endl;
+        return;
+    }
+    mbr MBR;
+    int pos;
+    fseek(file, 0, SEEK_SET);
+    fread(&MBR, sizeof(mbr), 1, file); // Se recupera lo que hay en el archivo en MBR, del tamaño del struct mbr
+    ebr aux;
+    particion auxp;
+    bool otra;
+    bool pe = false;
+    bool l = false;
+    for (int i = 0; i < 4; ++i) {
+        if (MBR.mbr_partitions[i].part_name == this->name){
+            if (MBR.mbr_partitions[i+1].part_status != '0'){
+                cout << endl << "-- NO EXISTE ESPACIO DESPUES DE LA PARTICION --" << endl;
+                return;
+            }
+            pe = true;
+            pos = i;
+            auxp = MBR.mbr_partitions[i];
+            break;
+        }
+        if (MBR.mbr_partitions[i].part_type == 'e'){
+            fseek(file, MBR.mbr_partitions[i].part_start, SEEK_SET);
+            fread(&aux, sizeof(ebr), 1, file);
+            do{
+                if(aux.part_name == this->name){
+                    if (aux.part_next > 0){
+                        cout << endl << "-- NO EXISTE ESPACIO DESPUES DE LA PARTICION --" << endl;
+                        return;
+                    }
+                    auxp = MBR.mbr_partitions[i];
+                    l = true;
+                    break;
+                }
+                if (aux.part_next > 0){
+                    fseek(file, aux.part_next, SEEK_SET);
+                    fread(&aux, sizeof(ebr), 1, file);
+                    otra = true;
+                }else{
+                    otra = false;
+                }
+            }while(otra);
+        }
+        if (l){
+            break;
+        }
+    }
+    if (!pe && !l){
+        cout << endl << "-- NO EXISTE LA PARTICION EN EL DISCO --" << endl << endl;
+        return;
+    }
+    int numsize;
+    if(this->u == "k"){ //kb
+        numsize =  this->add * 1024;
+    }else if(this->u == "b"){
+        numsize = this->add;
+    }else if(this->u == "m"){ //mb
+        numsize =  this->add * 1024 * 1024;
+    }else{
+        cout << endl << "---UNIDADES DE SIZE INCORRECTAS---" << endl;
+        return;
+    }
+    if (l){ // si la particion es logica
+        if (this->add > 0){ //agregar espacio
+            ebr temp;
+            fseek(file, auxp.part_start, SEEK_SET);
+            fread(&temp, sizeof(ebr), 1, file);
+            int contador = 0;
+            if (aux.part_size + numsize > auxp.part_size){
+                cout << endl << "--- LA PARTICION LOGICA MAS LO AGREGADO, ES MAS GRANDE QUE LA EXTENDIDA ---" << endl;
+                return;
+            }
+            while (temp.part_next != -1){
+                if (temp.part_status != '0'){
+                    contador += temp.part_size;
+                }
+                fseek(file, temp.part_next, SEEK_SET);
+                fread(&temp, sizeof(ebr), 1, file);
+            }
+            if (temp.part_status != '0'){
+                contador += temp.part_size;
+            }
+            contador = auxp.part_size - contador;
+            if (numsize > contador){
+                cout << endl << "--- YA NO HAY ESPACIO EN LA EXTENDIDA PARA ESTA PARTICION CON LO QUE SE AGREGA ---" << endl;
+                return;
+            }
+            aux.part_size = aux.part_size + numsize; // agregado su espacio
+        }else{ //quitar espacio
+            numsize = numsize * -1;
+            if (numsize > aux.part_size){
+                cout << endl << "-- ERROR : NO QUEDARA ESPACIO POSITIVO EN LA PARTICION -- " << endl;
+                return;
+            }
+            aux.part_size = aux.part_size - numsize; //quitado su espacio
+        }
+        fseek(file, aux.part_start - sizeof(ebr), SEEK_SET);
+        fwrite(&aux, sizeof(ebr), 1, file);
+        cout << "-- Particion logica modificada: " << aux.part_name << endl;
+    }
+    if(pe){ // si la particion es primario o extendida
+        if (this->add > 0){ //agregar espacio
+            int disponible = 0;
+            for (int i = 0; i < 4; ++i) {
+                if (MBR.mbr_partitions[i].part_status != '0'){
+                    disponible += MBR.mbr_partitions[i].part_size;
+                }
+            }
+            disponible = MBR.mbr_tamano - disponible;
+            if(MBR.mbr_tamano < auxp.part_size + numsize){
+                cout << endl << "-- PARTICION MAS AGREGADO MAS GRANDE QUE EL DISCO -- " << endl;
+                return;
+            }
+            if (disponible < numsize){
+                cout << endl << "-- EL DISCO NO TIENE ESPACIO DISPONIBLE, PARA ESTA PARTICION CON LO QUE SE LE AGREGA --" << endl;
+                return;
+            }
+            auxp.part_size = auxp.part_size + numsize;
+            MBR.mbr_partitions[pos] = auxp;
+        }else{ // quitar espacio
+            numsize = numsize * -1;
+            if (numsize > auxp.part_size){
+                cout << endl << "-- ERROR : NO QUEDARA ESPACIO POSITIVO EN LA PARTICION  -- " << endl;
+                return;
+            }
+            auxp.part_size = auxp.part_size - numsize;
+            MBR.mbr_partitions[pos] = auxp;
+        }
+        fseek(file, 0, SEEK_SET);
+        fwrite(&MBR, sizeof(mbr), 1, file);
+        cout << "-- Particion modificada: " << auxp.part_name << " de tipo:" << auxp.part_type <<endl;
+    }
+    this->printDisco(file);
+}
+
+
 void fdisk::printDisco(FILE* arch) {
     mbr MBR;
     ebr aux;
@@ -458,6 +680,7 @@ string fdisk::ToLower(string cadena) {
     for (int i = 0; i < cadena.length(); i++) cadena[i] = tolower(cadena[i]);
     return cadena;
 }
+
 
 
 

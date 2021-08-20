@@ -8,7 +8,6 @@ mount::mount() {
 }
 
 void mount::montarParticion(string path, string name) {
-    cout << endl << "----------- MONTAR PARTICION -------------" << endl;
     FILE *file;
     file = fopen(path.c_str(), "rb+"); // Se abre con permisos mixtos
     if (file == NULL) {
@@ -80,7 +79,7 @@ void mount::montarParticion(string path, string name) {
             char con = discos[i].letra + '0'; // lo convierto al ascii
             discos[i].particiones[j].id = to_string(carnet) + to_string(discos[i].particiones[j].numero) + con;
             discos[i].letra++;
-            cout << "-- DISCO MONTADO --" << endl;
+            numeroparticion++;
             break;
         }
     }
@@ -88,32 +87,6 @@ void mount::montarParticion(string path, string name) {
     this->imprimirMontajes();
 }
 
-void mount::desmontarParticion(string id) {
-    bool sia;
-    int contadorP = 0;
-    int i;
-    for (i = 0; i < 10; ++i) {
-        if (discos[i].estado == 1){
-            for (int j = 0; j < 24; ++j) {
-                if (discos[i].particiones[j].id == id){
-                    discos[i].particiones[j].estado = 0;
-                    sia = true;
-                    break;
-                }
-                contadorP++;
-            }
-        }
-    }
-    if (sia){
-        if (contadorP == 0){
-            discos[i].estado = 0;
-        }
-    }else{
-        cout << "-- NO SE ENCONTRO LA PARTICION MONTADA --" << endl;
-        return;
-    }
-    this->imprimirMontajes(); // solo para comprobar
-}
 
 void mount::imprimirMontajes() {
     char esc_char = 27;

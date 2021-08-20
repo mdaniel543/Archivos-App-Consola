@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mount.cpp
-mount.h
-/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mount.h
+/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/fdisk.cpp
+fdisk.h
+/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/fdisk.h
 
-/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mount.h
+/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/fdisk.h
 vector
 -
 string
@@ -30,5 +30,7 @@ filesystem
 
 /home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.h
 ctime
+-
+string
 -
 

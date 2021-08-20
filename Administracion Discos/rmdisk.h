@@ -16,7 +16,6 @@ class rmdisk {
 public:
     rmdisk(string parametro);
     void borrarDisco();
-
 private:
     string path;
 };
