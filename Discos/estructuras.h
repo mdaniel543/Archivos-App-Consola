@@ -45,6 +45,7 @@ typedef struct{
     int Journal_permisos; //777...664
 }JOURNAL;
 
+
 typedef struct {
     int s_filesystem_type;
     int s_inodes_count;

@@ -22,8 +22,7 @@ public:
     void CrearParticion();
     void printDisco(FILE* arch);
     void validarDisco(particion part);
-    void particionPrimaria(FILE *file, particion particionu, mbr Disk);
-    void particionExtendida(FILE *file, particion particionu, mbr Disk);
+    void particionPrimExt(FILE *file, particion particionu, mbr Disk);
     void particionLogica(FILE *file, particion particionu, mbr Disk, particion Extendida);
     int fitex(char fit);
     void modificarParticion();

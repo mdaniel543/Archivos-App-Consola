@@ -19,7 +19,7 @@ void exec::leerArchivo() {
     Interprete* inter = new Interprete(true);
     while (getline(infile, comando))
     {
-        if (comando.empty() == false){
+        if (comando.empty() == false && comando.length() > 2){
             cout << comando << endl;
             if (comando.at(0) != '#'){
                 inter->SepararComando(comando);
