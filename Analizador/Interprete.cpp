@@ -58,6 +58,8 @@ void Interprete::ReconocerComando(string comando, vector<string> parametros ){
         nuevo->montadas = montar;
         nuevo->formatearParticion();
         montar = nuevo->montadas;
+    }else if(comando == "rep"){
+        new rep(parametros, montar);
     }
     else if(comando == "pause"){
         if (script){

@@ -393,29 +393,29 @@ Discos/estructuras.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.s
 .PHONY : Discos/estructuras.cpp.s
 
-Reportes/name.o: Reportes/name.cpp.o
-.PHONY : Reportes/name.o
+Reportes/rep.o: Reportes/rep.cpp.o
+.PHONY : Reportes/rep.o
 
 # target to build an object file
-Reportes/name.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o
-.PHONY : Reportes/name.cpp.o
+Reportes/rep.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.o
+.PHONY : Reportes/rep.cpp.o
 
-Reportes/name.i: Reportes/name.cpp.i
-.PHONY : Reportes/name.i
+Reportes/rep.i: Reportes/rep.cpp.i
+.PHONY : Reportes/rep.i
 
 # target to preprocess a source file
-Reportes/name.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.i
-.PHONY : Reportes/name.cpp.i
+Reportes/rep.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.i
+.PHONY : Reportes/rep.cpp.i
 
-Reportes/name.s: Reportes/name.cpp.s
-.PHONY : Reportes/name.s
+Reportes/rep.s: Reportes/rep.cpp.s
+.PHONY : Reportes/rep.s
 
 # target to generate assembly for a file
-Reportes/name.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.s
-.PHONY : Reportes/name.cpp.s
+Reportes/rep.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MIA_Proyecto1_201709450.dir/build.make CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.s
+.PHONY : Reportes/rep.cpp.s
 
 Script/exec.o: Script/exec.cpp.o
 .PHONY : Script/exec.o
@@ -507,9 +507,9 @@ help:
 	@echo "... Discos/estructuras.o"
 	@echo "... Discos/estructuras.i"
 	@echo "... Discos/estructuras.s"
-	@echo "... Reportes/name.o"
-	@echo "... Reportes/name.i"
-	@echo "... Reportes/name.s"
+	@echo "... Reportes/rep.o"
+	@echo "... Reportes/rep.i"
+	@echo "... Reportes/rep.s"
 	@echo "... Script/exec.o"
 	@echo "... Script/exec.i"
 	@echo "... Script/exec.s"

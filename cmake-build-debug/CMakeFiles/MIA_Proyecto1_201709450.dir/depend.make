@@ -46,13 +46,16 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o: \
  ../Analizador/Interprete.cpp \
  ../Analizador/Interprete.h \
  ../Discos/estructuras.h \
+ ../Reportes/rep.h \
  ../Script/exec.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o: \
  ../Discos/estructuras.cpp \
  ../Discos/estructuras.h
-CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o: \
- ../Reportes/name.cpp \
- ../Reportes/name.h
+CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.o: \
+ ../Administracion\ Discos/mount.h \
+ ../Discos/estructuras.h \
+ ../Reportes/rep.cpp \
+ ../Reportes/rep.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o: \
  ../Administracion\ Carpetas\ y\ Permisos/pause.h \
  ../Administracion\ Discos/fdisk.h \
@@ -63,6 +66,7 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o: \
  ../Administracion\ Discos/umount.h \
  ../Analizador/Interprete.h \
  ../Discos/estructuras.h \
+ ../Reportes/rep.h \
  ../Script/exec.cpp \
  ../Script/exec.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o: \
@@ -75,5 +79,6 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o: \
  ../Administracion\ Discos/umount.h \
  ../Analizador/Interprete.h \
  ../Discos/estructuras.h \
+ ../Reportes/rep.h \
  ../Script/exec.h \
  ../main.cpp

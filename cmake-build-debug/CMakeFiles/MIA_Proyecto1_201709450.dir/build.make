@@ -118,22 +118,9 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/chmod.
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/chmod.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Carpetas y Permisos/chmod.cpp" -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/chmod.cpp.s
 
-CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
-CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o: ../Reportes/name.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o -c /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/name.cpp
-
-CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/name.cpp > CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.i
-
-CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/name.cpp -o CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.s
-
 CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
 CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o: ../Analizador/Interprete.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o -c /home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.cpp
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.i: cmake_force
@@ -146,7 +133,7 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.s: cmake_force
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
 CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o: ../Discos/estructuras.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o -c /home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.cpp
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.i: cmake_force
@@ -159,7 +146,7 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.s: cmake_force
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o: ../Administracion\ Discos/rmdisk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o -c "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/rmdisk.cpp"
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.i: cmake_force
@@ -172,7 +159,7 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.s: cmake
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
 CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o: ../Script/exec.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o -c /home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.cpp
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.i: cmake_force
@@ -185,7 +172,7 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.s: cmake_force
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.cpp.o: ../Administracion\ Carpetas\ y\ Permisos/pause.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.cpp.o -c "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Carpetas y Permisos/pause.cpp"
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.cpp.i: cmake_force
@@ -198,7 +185,7 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.o: ../Administracion\ Discos/fdisk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.o -c "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/fdisk.cpp"
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.i: cmake_force
@@ -211,7 +198,7 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.s: cmake_
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o: ../Administracion\ Discos/mount.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o -c "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mount.cpp"
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.i: cmake_force
@@ -224,7 +211,7 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.s: cmake_
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o: ../Administracion\ Discos/mkfs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o -c "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mkfs.cpp"
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.i: cmake_force
@@ -237,7 +224,7 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.s: cmake_f
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o: ../Administracion\ Discos/umount.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o -c "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/umount.cpp"
 
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.i: cmake_force
@@ -248,13 +235,25 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/umount.cpp" -o CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.s
 
+CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.o: CMakeFiles/MIA_Proyecto1_201709450.dir/flags.make
+CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.o: ../Reportes/rep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.o -c /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/rep.cpp
+
+CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/rep.cpp > CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.i
+
+CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/rep.cpp -o CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.s
+
 # Object files for target MIA_Proyecto1_201709450
 MIA_Proyecto1_201709450_OBJECTS = \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/chmod.cpp.o" \
-"CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o" \
@@ -263,7 +262,8 @@ MIA_Proyecto1_201709450_OBJECTS = \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o" \
 "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o" \
-"CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o"
+"CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o" \
+"CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.o"
 
 # External object files for target MIA_Proyecto1_201709450
 MIA_Proyecto1_201709450_EXTERNAL_OBJECTS =
@@ -272,7 +272,6 @@ MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/chmod.cpp.o
-MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/rmdisk.cpp.o
@@ -282,6 +281,7 @@ MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_D
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mount.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkfs.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/umount.cpp.o
+MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.o
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/build.make
 MIA_Proyecto1_201709450: CMakeFiles/MIA_Proyecto1_201709450.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/daniel/Escritorio/MIA-Proyecto1-201709450/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable MIA_Proyecto1_201709450"

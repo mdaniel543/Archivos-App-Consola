@@ -10,7 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Usuarios/login.cpp.o"
   "CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o"
   "CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o"
-  "CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o"
+  "CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.o"
   "CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o"
   "CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o"
   "MIA_Proyecto1_201709450"

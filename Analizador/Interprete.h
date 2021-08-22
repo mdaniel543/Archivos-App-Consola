@@ -13,6 +13,7 @@
 #include "../Script/exec.h"
 #include "../Administracion Carpetas y Permisos/pause.h"
 #include "../Administracion Discos/fdisk.h"
+#include "../Reportes/rep.h"
 
 #include <vector>
 #include <string>

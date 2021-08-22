@@ -11,6 +11,7 @@ umount::umount(vector<string> parametros) {
         getline(input_stringstream, name, '=');
         getline(input_stringstream, info, '=');
         name = ToLower(name);
+        info = ToLower(info);
         if (name == "-id"){
             this->id = info;
         }

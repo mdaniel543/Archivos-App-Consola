@@ -46,13 +46,16 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Analizador/Interprete.cpp.o
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.cpp
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.h
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.h
+ /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/rep.h
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Discos/estructuras.cpp.o
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.cpp
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.h
-CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/name.cpp.o
- /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/name.cpp
- /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/name.h
+CMakeFiles/MIA_Proyecto1_201709450.dir/Reportes/rep.cpp.o
+ /home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/mount.h
+ /home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.h
+ /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/rep.cpp
+ /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/rep.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Carpetas y Permisos/pause.h
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/fdisk.h
@@ -63,6 +66,7 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Script/exec.cpp.o
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/umount.h
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.h
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.h
+ /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/rep.h
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.cpp
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o
@@ -75,5 +79,6 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/main.cpp.o
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Administracion Discos/umount.h
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.h
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.h
+ /home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/rep.h
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.h
  /home/daniel/Escritorio/MIA-Proyecto1-201709450/main.cpp

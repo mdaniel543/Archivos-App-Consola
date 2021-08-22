@@ -148,10 +148,10 @@
 		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Discos/estructuras.h">
 			<Option target="MIA_Proyecto1_201709450"/>
 		</Unit>
-		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/name.cpp">
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/rep.cpp">
 			<Option target="MIA_Proyecto1_201709450"/>
 		</Unit>
-		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/name.h">
+		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Reportes/rep.h">
 			<Option target="MIA_Proyecto1_201709450"/>
 		</Unit>
 		<Unit filename="/home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.cpp">
