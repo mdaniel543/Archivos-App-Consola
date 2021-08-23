@@ -55,6 +55,13 @@ void umount::desmontarParticion() {
     }
     if(!sihay){
         montadas.discos[i].estado = 0;
+        for (int j = 9; j <= 0; --j) {
+            if (montadas.discos[j].estado == 1){
+                if (montadas.discos[j-1].estado == 0){
+                    montadas.discos[j-1] = montadas.discos[j];
+                }
+            }
+        }
     }
     this->montadas.imprimirMontajes();
 }

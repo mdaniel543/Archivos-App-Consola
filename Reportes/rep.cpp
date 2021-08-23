@@ -253,9 +253,9 @@ void rep::repDisk() {
     }
     graph << "+ \"}}\"" << endl;
     graph << "];" << endl << "}";
-    cout << "---" <<endl;
+    /*cout << "---" <<endl;
     cout << graph.str() << endl;
-    cout << "---" <<endl;
+    cout << "---" <<endl;*/
     this->crearGrafo(graph.str());
     graph.clear();
 }

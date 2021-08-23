@@ -55,7 +55,7 @@ void mkdisk::crearDisco() {
     char fechayhora[20];
     t = time(NULL);
     tm = localtime(&t);
-    strftime(fechayhora, 20, "%Y/%m/%d %H:%M:%S", tm);
+    strftime(fechayhora, 20, "%d/%m/%Y %H:%M:%S", tm);
     strcpy(ine.mbr_fecha_creacion, fechayhora); // dato del mbr
     cout << ine.mbr_fecha_creacion << endl;
     ine.mbr_disk_signature = rand() % 100; // dato para la etiqueta del disco

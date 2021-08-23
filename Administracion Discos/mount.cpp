@@ -60,6 +60,7 @@ void mount::montarParticion(string path, string name) {
             discos[i].estado = 1;
             discos[i].path = path;
             discos[i].letra = 49;
+            numeroparticion++;
             existe = true;
             break;
         } else if (discos[i].path == path){
@@ -73,13 +74,12 @@ void mount::montarParticion(string path, string name) {
     }
     for (int j = 0; j < 24; ++j) { /// MONTO LA PARTICION
         if (discos[i].particiones[j].estado == 0){
-            discos[i].particiones[j].numero = numeroparticion + 1;
+            discos[i].particiones[j].numero = numeroparticion;
             discos[i].particiones[j].nombre = name;
             discos[i].particiones[j].estado = 1;
             char con = discos[i].letra + '0'; // lo convierto al ascii
             discos[i].particiones[j].id = to_string(carnet) + to_string(discos[i].particiones[j].numero) + con;
             discos[i].letra++;
-            numeroparticion++;
             break;
         }
     }

@@ -25,7 +25,7 @@ typedef struct{
 }particionMontada;
 
 typedef struct{
-    int letra;
+    int letra = 0;
     string path;
     int estado;
     particionMontada particiones[24];

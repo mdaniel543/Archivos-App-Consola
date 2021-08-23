@@ -36,6 +36,9 @@ fdisk::fdisk(vector<string> parametros) {
             }
         }
     }
+    if (!this->del.empty() && this->add > 0){
+        cout << "-- PARAMETROS INCOMPATIBLES --" << endl;
+    }
     if (!del.empty()){
         this->deleteParticion();
     }else if(ad){
@@ -51,7 +54,7 @@ fdisk::fdisk(vector<string> parametros) {
 void fdisk::CrearParticion() {
     particion part;
     int numsize;
-    if(this->u == "k"){ //kb
+    if(this->u == "k" || this->u.empty()){ //kb
         numsize =  this->size * 1024;
     }else if(this->u == "b"){
         numsize = this->size;
@@ -595,7 +598,7 @@ void fdisk::modificarParticion() {
     bool l = false;
     for (int i = 0; i < 4; ++i) {
         if (MBR.mbr_partitions[i].part_name == this->name){
-            if (MBR.mbr_partitions[i+1].part_status != '0'){
+            if (this->add > 0 && MBR.mbr_partitions[i+1].part_status != '0'){
                 cout << endl << "-- NO EXISTE ESPACIO DESPUES DE LA PARTICION --" << endl;
                 return;
             }
