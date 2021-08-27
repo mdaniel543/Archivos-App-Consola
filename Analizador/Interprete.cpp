@@ -56,7 +56,7 @@ void Interprete::ReconocerComando(string comando, vector<string> parametros ){
     }else if(comando == "mkfs"){
         mkfs* nuevo = new mkfs(parametros);
         nuevo->montadas = montar;
-        nuevo->formatearParticion();
+        nuevo->particionMontada();
         montar = nuevo->montadas;
     }else if(comando == "rep"){
         new rep(parametros, montar);

@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
         comando << argv[i] << " ";
     }
     interprete->SepararComando(comando.str());*/
-    interprete->SepararComando("exec -path=/home/daniel/Escritorio/prueba.sh");
+    interprete->SepararComando("exec -path=/home/daniel/Escritorio/exec/prueba.sh");
     return 0;
 }
 
