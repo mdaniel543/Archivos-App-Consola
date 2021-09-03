@@ -20,8 +20,10 @@ void exec::leerArchivo() {
     while (getline(infile, comando))
     {
         if (comando.empty() == false && comando.length() > 2){
-            cout << comando << endl;
-            if (comando.at(0) != '#'){
+            if(comando.at(0) == '#'){
+                cout << comando << endl;
+            }
+            else{
                 inter->SepararComando(comando);
             }
         }

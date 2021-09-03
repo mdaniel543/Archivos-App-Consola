@@ -10,6 +10,7 @@ CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Carpetas_y_Permisos/pause.
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/fdisk.cpp.o: \
  ../Administracion\ Discos/fdisk.cpp \
  ../Administracion\ Discos/fdisk.h \
+ ../Administracion\ Discos/mount.h \
  ../Discos/estructuras.h
 CMakeFiles/MIA_Proyecto1_201709450.dir/Administracion_Discos/mkdisk.cpp.o: \
  ../Administracion\ Discos/mkdisk.cpp \

@@ -100,7 +100,6 @@ void mkfs::particionMontada() {
             break;
         }
     }
-
     this->formatear(file, MBR, auxp, aux, pe);
 }
 
@@ -131,7 +130,6 @@ void mkfs::formatear(FILE* file, mbr temp, particion auxp, ebr aux, bool primari
     t = time(NULL);
     tm = localtime(&t);
     strftime(fechayhora, 16, "%d/%m/%Y %H:%M:%S", tm);
-
     fseek(file, start, SEEK_SET);
     if(this->type == "full"){
         char buff;
@@ -160,20 +158,20 @@ void mkfs::formatear(FILE* file, mbr temp, particion auxp, ebr aux, bool primari
     sbloque.s_bm_block_start = sbloque.s_bm_inode_start + n ;
     sbloque.s_inode_start = sbloque.s_bm_block_start+3*n; // cuidado
     sbloque.s_block_start = sbloque.s_inode_start+n*sizeof(inodo); // cuidado
-    fseek(file, start, SEEK_SET); //INICIO DE LA PARTICION
+    fseek(file, start, SEEK_SET);
     fwrite(&sbloque,sizeof(superbloque),1, file); //escribimos el superbloque en la particion
-    //ahora creo los bitmap de inodos Y BLOQUES
-    char bitinodos[n];
+
+    char bitinodos[n]; //ahora creo los bitmap de inodos y bloques
     char bibloques[3*n];
     int iniciobitnodos = start + sizeof(superbloque);
     if (tipo == 3) iniciobitnodos += 100*sizeof(bloque_archivos);
     for(int i=2;i<n;i++){
-        bitinodos[i]='0'; //valor por defecto
+        bitinodos[i]='0';
     }
-    bitinodos[0]='1';//----EL BIT DE INODO 0 PASA A ESTAR OCUPADO POR LA CARPETA ROOT
+    bitinodos[0]='1';
     bitinodos[1]='1';
-    fseek(file,iniciobitnodos, SEEK_SET);
-    fwrite(&bitinodos,sizeof(bitinodos),1,file);//ver si es sizeof(bitinodos)
+    fseek(file, iniciobitnodos, SEEK_SET);
+    fwrite(&bitinodos, sizeof(bitinodos),1,file);
     int iniciobloques=iniciobitnodos+n; //-------escribo mi bitmap de bloques
     for(int i=2;i<3*n;i++){
         bibloques[i]='0';
@@ -216,14 +214,12 @@ void mkfs::formatear(FILE* file, mbr temp, particion auxp, ebr aux, bool primari
     memset(&contenraiz.b_name, 0, sizeof(contenraiz.b_name));//definimos la carpeta actual
     contenraiz.b_inodo = -1;
     carpetaroot.b_content[3] = contenraiz;
-    //------GUARDAMOS EL INODO Y EL BLOQUE DE LA CARPETA EN EL DISCO
     fseek(file, auxsuperbloque.s_inode_start, SEEK_SET);
     fwrite(&raiz, sizeof(inodo), 1, file);
     auxsuperbloque.s_free_inodes_count--;//disminuyo en 1 los inodos ocupados
     fseek(file, auxsuperbloque.s_block_start, SEEK_SET);
     fwrite(&carpetaroot, 64, 1, file);
     auxsuperbloque.s_free_blocks_count--;//disminuyo en 1 los bloques de archivos ocupados
-    //-------------------AHORA CREO INODO PARA EL ARCHIVO USER----
     char datosarchivo[]="1,G,root\n1,U,root,root,123\n";//cadena a quemar en el archivo
     inodo archivousuarios;
     archivousuarios.i_gid=1;
@@ -240,25 +236,20 @@ void mkfs::formatear(FILE* file, mbr temp, particion auxp, ebr aux, bool primari
         archivousuarios.i_block[i]=-1;
     }
     archivousuarios.i_perm=664;
-    archivousuarios.i_block[0]=1; //su bloque directo va al bloque 1 que es donde va a estar el archivo USERS
+    archivousuarios.i_block[0]=1;
     archivousuarios.i_type='1'; //es archivo
     //termino de crear el inodo de archivos usuario
-    //------------------------AHORA CREO BLOQUE PARA EL ARCHIVO USER
     bloque_archivos bloquearchivos;
     strcpy(bloquearchivos.b_content,datosarchivo);
-    //-------------------------------TERMINAMOS DE CREAR EL BLOQUE DE ARCHIVOS
-    //------GUARDAMOS EL INODO Y EL BLOQUE DEL ARCHIVO USR EN EL DISCO
     fseek(file, auxsuperbloque.s_inode_start + sizeof(inodo), SEEK_SET);
     fwrite(&archivousuarios, sizeof(inodo), 1, file);
-    auxsuperbloque.s_free_inodes_count--;//disminuyo en 1 los inodos ocupados
+    auxsuperbloque.s_free_inodes_count--;
     fseek(file, auxsuperbloque.s_block_start+64, SEEK_SET);
     fwrite(&bloquearchivos, 64, 1, file);
-    auxsuperbloque.s_free_blocks_count--;//disminuyo en 1 los bloques ocupados
-
+    auxsuperbloque.s_free_blocks_count--;
     fseek(file, start, SEEK_SET);
     fwrite(&auxsuperbloque, sizeof(superbloque), 1, file);
-    fclose(file); //cierro el archivo
-    std::cout << "\nPARTICION FORMATEADA CORRECTAMENTE!!! \n"; //si da null es porque no se encontro el archivo
+    std::cout << "\nPARTICION FORMATEADA CORRECTAMENTE!!! \n";
 
 }
 

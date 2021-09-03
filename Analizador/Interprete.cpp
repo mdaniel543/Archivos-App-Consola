@@ -45,7 +45,7 @@ void Interprete::ReconocerComando(string comando, vector<string> parametros ){
         rmdisk* nuevo = new rmdisk(parametros[0]);
         nuevo->borrarDisco();
     }else if(comando == "fdisk"){
-        new fdisk(parametros);
+        new fdisk(parametros, montar);
     }else if(comando == "mount"){
         this->ParametrosMount(parametros);
     }else if(comando == "umount"){

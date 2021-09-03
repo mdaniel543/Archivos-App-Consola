@@ -4,7 +4,7 @@
 
 #include "fdisk.h"
 
-fdisk::fdisk(vector<string> parametros) {
+fdisk::fdisk(vector<string> parametros, mount montadas) {
     bool ad = false, prim = false;
     for (string param : parametros){
         stringstream input_stringstream(param);
@@ -25,6 +25,7 @@ fdisk::fdisk(vector<string> parametros) {
         }else if(name == "-type"){
             type = info;
         }else if(name == "-delete"){
+            this->montadas = montadas;
             del = info;
         }else if(name == "-name"){
             this->name = info;
@@ -242,10 +243,12 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                             if (particionu.part_size > sizeRecuperado){
                                 continue;
                             }
+                            auxu = Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
+                            j = i;
+                        }else{
+                            j = i;
+                            break;
                         }
-                        auxu = Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
-                        j = i;
-                        sifunciono = true;
                     }else{
                         if(i != 3){
                             if (Disk.mbr_partitions[i + 1].part_start != -1){
@@ -253,27 +256,43 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                                 if (particionu.part_size > sizeRecuperado){
                                     continue;
                                 }
-                            }
-                        }
-                        if (i != 3){
-                            if (auxu != -1){
-                                if (auxu > Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start){
-                                    auxu = Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
-                                    j =  i;
+                                if (auxu != -1){
+                                    if (auxu > sizeRecuperado){
+                                        auxu = sizeRecuperado;
+                                        j =  i;
+                                    }
+                                }else{
+                                    auxu = sizeRecuperado;
+                                    j = i;
                                 }
                             }else{
-                                auxu = Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
                                 j = i;
+                                break;
                             }
+                        }else{
+                            if (Disk.mbr_partitions[i].part_start != -1){
+                                int sizeRecuperado = Disk.mbr_tamano - Disk.mbr_partitions[i].part_start;
+                                if (auxu != -1){
+                                    if (auxu > sizeRecuperado){
+                                        j = i;
+                                    }
+                                    break;
+                                }
+                            }
+                            j = i;
                         }
-                        sifunciono = true;
                     }
                 }
             }
+            sifunciono = true;
             if (j == 0){
                 particionu.part_start = sizeof(mbr);
             }else{
-                particionu.part_start = Disk.mbr_partitions[j - 1].part_start + Disk.mbr_partitions[j - 1].part_size;
+                if (Disk.mbr_partitions[j].part_start != -1){
+                    particionu.part_start = Disk.mbr_partitions[j].part_start;
+                }else{
+                    particionu.part_start = Disk.mbr_partitions[j - 1].part_start + Disk.mbr_partitions[j - 1].part_size;
+                }
             }
             Disk.mbr_partitions[j] = particionu;
             break;
@@ -300,7 +319,11 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                                 }
                             }
                         }
-                        particionu.part_start = Disk.mbr_partitions[i - 1].part_start + Disk.mbr_partitions[i - 1].part_size;
+                        if (Disk.mbr_partitions[i].part_start != -1){
+                            particionu.part_start = Disk.mbr_partitions[i].part_start;
+                        }else{
+                            particionu.part_start = Disk.mbr_partitions[i - 1].part_start + Disk.mbr_partitions[i - 1].part_size;
+                        }
                         Disk.mbr_partitions[i] = particionu;
                         sifunciono = true;
                         break;
@@ -317,10 +340,12 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                             if (particionu.part_size > sizeRecuperado){
                                 continue;
                             }
+                            auxu = Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
+                            j = i;
+                        }else{
+                            j = i;
+                            break;
                         }
-                        auxu = Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
-                        j = i;
-                        sifunciono = true;
                     }else{
                         if(i != 3){
                             if (Disk.mbr_partitions[i + 1].part_start != -1){
@@ -328,27 +353,43 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                                 if (particionu.part_size > sizeRecuperado){
                                     continue;
                                 }
-                            }
-                        }
-                        if (i != 3){
-                            if (auxu != -1){
-                                if (auxu < Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start){
-                                    auxu = Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
-                                    j =  i;
+                                if (auxu != -1){
+                                    if (auxu < sizeRecuperado){
+                                        auxu = sizeRecuperado;
+                                        j =  i;
+                                    }
+                                }else{
+                                    auxu = sizeRecuperado;
+                                    j = i;
                                 }
                             }else{
-                                auxu = Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
                                 j = i;
+                                break;
                             }
+                        }else{
+                            if (Disk.mbr_partitions[i].part_start != -1){
+                                int sizeRecuperado = Disk.mbr_tamano - Disk.mbr_partitions[i].part_start;
+                                if (auxu != -1){
+                                    if (auxu < sizeRecuperado){
+                                        j = i;
+                                    }
+                                    break;
+                                }
+                            }
+                            j = i;
                         }
-                        sifunciono = true;
                     }
                 }
             }
+            sifunciono = true;
             if (j == 0){
                 particionu.part_start = sizeof(mbr);
             }else{
-                particionu.part_start = Disk.mbr_partitions[j - 1].part_start + Disk.mbr_partitions[j - 1].part_size;
+                if (Disk.mbr_partitions[j].part_start != -1){
+                    particionu.part_start = Disk.mbr_partitions[j].part_start;
+                }else{
+                    particionu.part_start = Disk.mbr_partitions[j - 1].part_start + Disk.mbr_partitions[j - 1].part_size;
+                }
             }
             Disk.mbr_partitions[j] = particionu;
             break;
@@ -396,9 +437,8 @@ void fdisk::particionLogica(FILE *file, particion particionu, mbr Disk, particio
                                 fread(&aux, sizeof(ebr), 1, file);
                                 continue;
                             }
-                        }else{
-                            mi = aux.part_size;
                         }
+                        mi = aux.part_size;
                         particionE.part_next = aux.part_next;
                         particionE.part_start = aux.part_start;
                     }
@@ -406,7 +446,7 @@ void fdisk::particionLogica(FILE *file, particion particionu, mbr Disk, particio
                 fseek(file, aux.part_next, SEEK_SET);
                 fread(&aux, sizeof(ebr), 1, file);
             }
-            if (aux.part_size == -1 || aux.part_status == '0'){
+            if (aux.part_size == -1 || aux.part_status == '0' || mi != -1){
                 if (aux.part_size ==-1)
                     particionE.part_start = aux.part_start;
                 fseek(file, particionE.part_start - sizeof(ebr), SEEK_SET);
@@ -454,9 +494,8 @@ void fdisk::particionLogica(FILE *file, particion particionu, mbr Disk, particio
                                 fread(&aux, sizeof(ebr), 1, file);
                                 continue;
                             }
-                        }else{
-                            mi = aux.part_size;
                         }
+                        mi = aux.part_size;
                         particionE.part_next = aux.part_next;
                         particionE.part_start = aux.part_start;
                     }
@@ -464,7 +503,7 @@ void fdisk::particionLogica(FILE *file, particion particionu, mbr Disk, particio
                 fseek(file, aux.part_next, SEEK_SET);
                 fread(&aux, sizeof(ebr), 1, file);
             }
-            if (aux.part_size == -1 || aux.part_status == '0'){
+            if (aux.part_size == -1 || aux.part_status == '0' || mi != -1){
                 if (aux.part_size ==-1)
                     particionE.part_start = aux.part_start;
                 fseek(file, particionE.part_start - sizeof(ebr), SEEK_SET);
@@ -484,6 +523,19 @@ void fdisk::particionLogica(FILE *file, particion particionu, mbr Disk, particio
 }
 
 void fdisk::deleteParticion() {
+    int i;
+    for (i = 0; i < 10; ++i) {
+        if (montadas.discos[i].estado == 1){
+            for (int j = 0; j < 24; ++j) {
+                if (montadas.discos[i].particiones[j].estado == 1){
+                    if (montadas.discos[i].particiones[j].nombre == this->name){
+                        cout << endl << "-- LA PARTICION NO SE PUEDE ELIMINAR YA QUE ESTA MONTADA ---" << endl << endl;
+                        return;
+                    }
+                }
+            }
+        }
+    }
     FILE *file;
     file = fopen(this->path.c_str(), "rb+"); // Se abre con permisos mixtos
     if (file == NULL) {
@@ -499,11 +551,13 @@ void fdisk::deleteParticion() {
     bool otra;
     bool pe = false;
     bool l = false;
+    string nombre = "";
     for (int i = 0; i < 4; ++i) {
         if (MBR.mbr_partitions[i].part_name == this->name){
             pe = true;
             pos = i;
             auxp = MBR.mbr_partitions[i];
+            nombre = auxp.part_name;
             break;
         }
         if (MBR.mbr_partitions[i].part_type == 'e'){
@@ -513,6 +567,7 @@ void fdisk::deleteParticion() {
                 if(aux.part_name == this->name){
                     l = true;
                     auxp = MBR.mbr_partitions[i];
+                    nombre = aux.part_name;
                     break;
                 }
                 if (aux.part_next > 0){
@@ -535,7 +590,7 @@ void fdisk::deleteParticion() {
     string respuesta;
     cout << endl << "......................................................" << endl;
     while(!(respuesta == "s" || respuesta == "n")){
-        cout << "Seguro que deseas eliminar esta particion? [s/n]" << endl;
+        cout << "Seguro que deseas eliminar la particion \"" << nombre <<"\"? [s/n]" << endl;
         cin >> respuesta;
     }
     cout << "......................................................" << endl << endl;

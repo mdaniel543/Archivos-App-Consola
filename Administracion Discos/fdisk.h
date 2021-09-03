@@ -11,6 +11,7 @@
 #include <sstream>
 #include <algorithm>
 #include "../Discos/estructuras.h"
+#include "mount.h"
 #include <cstring>
 #include <filesystem>
 
@@ -18,7 +19,7 @@ using namespace std;
 
 class fdisk {
 public:
-    fdisk(vector<string> parametros);
+    fdisk(vector<string> parametros, mount montadas);
     void CrearParticion();
     void printDisco(FILE* arch);
     void validarDisco(particion part);
@@ -28,6 +29,7 @@ public:
     void modificarParticion();
     void deleteParticion();
     string ToLower(string cadena);
+    mount montadas;
 private :
     int size = 0;
     string u;

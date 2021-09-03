@@ -116,7 +116,7 @@ void rep::repMBR() {
         }
     }
     graph << "</table>" << endl << ">]" << endl << "}";
-    /*cout << "---" <<endl;
+   /* cout << "---" <<endl;
     cout << graph.str() << endl;
     cout << "---" <<endl;*/
     this->crearGrafo(graph.str());
@@ -249,6 +249,20 @@ void rep::repDisk() {
             graph << "+ \" | Primaria\"" << endl;
             double porcentaje = ((double)tempDisk.mbr_partitions[j].part_size/(double)tempDisk.mbr_tamano)*100.00;
             graph << "+ \"&#92;n" << porcentaje << "% \"" <<endl;
+            if (tempDisk.mbr_partitions[j + 1].part_start != -1){
+                int sizelibre = tempDisk.mbr_partitions[j + 1].part_start - (tempDisk.mbr_partitions[j].part_start + tempDisk.mbr_partitions[j].part_size);
+                if(sizelibre > 0){
+                    graph << "+ \" | Libre \"" << endl;
+                    double porcentaje = ((double)sizelibre/(double)tempDisk.mbr_tamano)*100.00;
+                    graph << "+ \"&#92;n" << porcentaje << "% \"" <<endl;
+                }
+            }
+            if (j == 3){
+                int fin = tempDisk.mbr_tamano - (tempDisk.mbr_partitions[j].part_start + tempDisk.mbr_partitions[j].part_size);
+                graph << "+ \" | Libre \"" << endl;
+                double porcentaje = ((double)fin/(double)tempDisk.mbr_tamano)*100.00;
+                graph << "+ \"&#92;n" << porcentaje << "% \"" <<endl;
+            }
         }
     }
     graph << "+ \"}}\"" << endl;
