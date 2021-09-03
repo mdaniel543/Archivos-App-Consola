@@ -71,7 +71,7 @@ void Interprete::ReconocerComando(string comando, vector<string> parametros ){
     else{
         cout << "***********************************************" << endl;
         cout << " ERROR comando: " << comando << " no encontrado" << endl;
-        cout << "************************************************" << endl;
+        cout << "************************************************" << endl << endl;
     }
 }
 

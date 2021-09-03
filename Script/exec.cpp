@@ -17,13 +17,13 @@ void exec::leerArchivo() {
     string comando;
     string comandoCompleto;
     Interprete* inter = new Interprete(true);
+    char esc_char = 27;
     while (getline(infile, comando))
     {
         if (comando.empty() == false && comando.length() > 2){
-            if(comando.at(0) == '#'){
-                cout << comando << endl;
-            }
-            else{
+            cout << endl << esc_char << "[3m" << comando << esc_char << "[0m" << endl;
+            if(comando.at(0) != '#'){
+                cout << endl;
                 inter->SepararComando(comando);
             }
         }

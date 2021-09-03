@@ -7,8 +7,8 @@
 pause::pause() {
     int flag;
     string sd;
-    cout << "#################################################" << endl;
+    cout << endl << "#################################################" << endl;
     cout << "Se encontro una pausa, para continuar pulse Enter" << endl;
-    cout << "#################################################" << endl;
+    cout << "#################################################" << endl << endl;
     flag = cin.get();
 }

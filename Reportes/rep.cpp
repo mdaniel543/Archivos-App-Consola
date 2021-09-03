@@ -120,6 +120,7 @@ void rep::repMBR() {
     cout << graph.str() << endl;
     cout << "---" <<endl;*/
     this->crearGrafo(graph.str());
+    cout << "REPORTE MBR GENERADO CORRECTAMENTE" << endl;
     graph.clear();
 }
 
@@ -224,6 +225,17 @@ void rep::repDisk() {
                     graph << "+ \" | Logica \"" << endl;
                     double porcentaje = ((double)aux.part_size/(double)tempDisk.mbr_tamano)*100.00;
                     graph << "+ \"&#92;n" << porcentaje << "% \"" <<endl;
+                    if (aux.part_next > 0){
+                        int pt = aux.part_start + aux.part_size;
+                        if (aux.part_next != pt + sizeof(ebr)){
+                            int sizere = (aux.part_next - sizeof(ebr)) - pt ;
+                            double porcentaje = ((double)sizere/(double)tempDisk.mbr_tamano)*100.00;
+                            if (porcentaje > 0){
+                                graph << "+ \" | Libre \"" << endl;
+                                graph << "+ \"&#92;n" << porcentaje << "% \"" <<endl;
+                            }
+                        }
+                    }
                 }else{
                     graph << "+ \" Libre \"" << endl;
                     double porcentaje = ((double)aux.part_size/(double)tempDisk.mbr_tamano)*100.00;
@@ -271,6 +283,7 @@ void rep::repDisk() {
     cout << graph.str() << endl;
     cout << "---" <<endl;*/
     this->crearGrafo(graph.str());
+    cout << "REPORTE DISK GENERADO CORRECTAMENTE" << endl;
     graph.clear();
 }
 

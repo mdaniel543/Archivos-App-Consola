@@ -27,7 +27,6 @@ mkdisk::mkdisk(vector<string> parametros) {
 }
 
 void mkdisk::crearDisco() {
-    cout << "--------------Crear Disco-------------" << endl;
     mbr ine;
     this->CrearRuta();
     FILE  *archivo = fopen(path.c_str(), "r");
@@ -43,7 +42,6 @@ void mkdisk::crearDisco() {
     }else{
         cout << endl << "---UNIDADES DE SIZE INCORRECTAS---" << endl;
     }
-    cout << tam << endl;
     archivo =fopen(this->path.c_str(),"wb");
     fwrite("\0",1,1,archivo);
     fseek(archivo,tam,SEEK_SET);
@@ -57,7 +55,6 @@ void mkdisk::crearDisco() {
     tm = localtime(&t);
     strftime(fechayhora, 20, "%d/%m/%Y %H:%M:%S", tm);
     strcpy(ine.mbr_fecha_creacion, fechayhora); // dato del mbr
-    cout << ine.mbr_fecha_creacion << endl;
     ine.mbr_disk_signature = rand() % 100; // dato para la etiqueta del disco
     // verificamos el FIT
     if(this->f.empty()){
@@ -112,7 +109,7 @@ void mkdisk::CrearRuta() {
         }
         x++;
     }
-    cout << ruta.str() << endl;
+    //cout << ruta.str() << endl;
     if (filesystem::create_directories(ruta.str())){
         cout << endl <<"-------SE CREO LA RUTA YA QUE NO EXISTIA---------" << endl;
     }

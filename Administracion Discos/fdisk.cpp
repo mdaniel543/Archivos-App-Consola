@@ -65,7 +65,6 @@ void fdisk::CrearParticion() {
         cout << endl << "---UNIDADES DE SIZE INCORRECTAS---" << endl;
         return;
     }
-    cout << numsize << endl;
     if (size < 0 ){
         cout << endl << "---ERRROR DE SIZE, DEBE SER MAYOR A CERO---" << endl;
         return;
@@ -226,7 +225,9 @@ void fdisk::validarDisco(particion part) {
     }else{
         particionPrimExt(file, part, tempDisk);
     }
-    this->printDisco(file);/// MANDO A VERIFICAR SI SE GUARDARON CAMBIOS EN EL DISCO
+    fclose(file);
+    cout  << "PARTICION " << part.part_name << " CREADA CORRECTAMENTE" << endl;
+    //this->printDisco(file);/// MANDO A VERIFICAR SI SE GUARDARON CAMBIOS EN EL DISCO
 }
 
 void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
@@ -630,9 +631,10 @@ void fdisk::deleteParticion() {
             cout << "--VALOR DELETE INCORRECTO--" << endl << endl;
             return;
         }
-        cout << "Particion a eliminada " << auxp.part_name << " de tipo:" << auxp.part_type <<endl;
+        cout << "PARTICION " << nombre << " ELIMINADA EXITOSAMENTE" << endl;
     }
-    this->printDisco(file);
+    //this->printDisco(file);
+    fclose(file);
 }
 
 void fdisk::modificarParticion() {
@@ -771,9 +773,10 @@ void fdisk::modificarParticion() {
         }
         fseek(file, 0, SEEK_SET);
         fwrite(&MBR, sizeof(mbr), 1, file);
-        cout << "-- Particion modificada: " << auxp.part_name << " de tipo:" << auxp.part_type <<endl;
+        cout << "-- PARTICION MODIFICADA: " << auxp.part_name << " DE TIPO: " << auxp.part_type <<endl;
     }
-    this->printDisco(file);
+    //this->printDisco(file);
+    fclose(file);
 }
 
 void fdisk::printDisco(FILE* arch) {
@@ -825,7 +828,7 @@ void fdisk::printDisco(FILE* arch) {
         }
         cout << endl;
     }
-    fclose(arch);
+    //fclose(arch);
 }
 
 int fdisk::fitex(char fit) {
