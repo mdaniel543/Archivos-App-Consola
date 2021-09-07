@@ -18,7 +18,7 @@
 
 class mkfs {
 public:
-    mkfs(vector<string> parametros);
+    mkfs(vector<string> parametros, mount montadas);
     void particionMontada();
     void formatear(FILE *file, mbr temp, particion auxp, ebr aux, bool primaria);
     string ToLower(string cadena);

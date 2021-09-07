@@ -4,8 +4,19 @@
 
 #include "umount.h"
 
-umount::umount(vector<string> parametros) {
+umount::umount(vector<string> parametros, mount montadas) {
     for (string param : parametros){
+        bool encontrado = false;
+        for (int i = 0; i < param.length(); ++i) {
+            if (param[i] == '='){
+                encontrado = true;
+                break;
+            }
+        }
+        if (!encontrado){
+            cout << "-- ERROR PARAMETRO NO ASIGNADO --" << endl;
+            return;
+        }
         stringstream input_stringstream(param);
         string name, info;
         getline(input_stringstream, name, '=');
@@ -14,12 +25,17 @@ umount::umount(vector<string> parametros) {
         info = ToLower(info);
         if (name == "-id"){
             this->id = info;
+        }else{
+            cout << " PARAMAETRO NO ENCONTRADO EN EL COMANDO UMOUNT" << endl;
+            return;
         }
     }
     if (id.empty()){
         cout << endl << "-- FALTA PARAMETROS PARA EL COMANDO UMOUNT --" << endl;
         return;
     }
+    this->montadas = montadas;
+    this->desmontarParticion();
 }
 
 void umount::desmontarParticion() {

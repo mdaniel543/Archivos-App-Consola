@@ -7,6 +7,17 @@
 fdisk::fdisk(vector<string> parametros, mount montadas) {
     bool ad = false, prim = false;
     for (string param : parametros){
+        bool encontrado = false;
+        for (int i = 0; i < param.length(); ++i) {
+            if (param[i] == '='){
+                encontrado = true;
+                break;
+            }
+        }
+        if (!encontrado){
+            cout << "-- ERROR PARAMETRO NO ASIGNADO --" << endl;
+            return;
+        }
         stringstream input_stringstream(param);
         string name, info;
         getline(input_stringstream, name, '=');
@@ -14,6 +25,7 @@ fdisk::fdisk(vector<string> parametros, mount montadas) {
         name = ToLower(name);
         if (name == "-path"){
             path = info;
+            continue;
         }
         info = ToLower(info);
         if(name == "-u"){
@@ -35,6 +47,9 @@ fdisk::fdisk(vector<string> parametros, mount montadas) {
             if (this->size != 0){
                 prim = true;
             }
+        }else{
+            cout << " PARAMAETRO NO ENCONTRADO EN EL COMANDO FDISK" << endl;
+            return;
         }
     }
     if (!this->del.empty() && this->add > 0){

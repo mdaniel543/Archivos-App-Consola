@@ -33,30 +33,23 @@ void Interprete::SepararComando(string lineacomando) {
 void Interprete::ReconocerComando(string comando, vector<string> parametros ){
     if (comando == "exec"){
         if(!script){
-            exec* nuevo = new exec(parametros[0]);
-            nuevo->leerArchivo();
+            new exec(parametros[0]);
         }else{
             cout << "El comando EXEC no se puede utilizar en un script" << endl;
         }
     }else if (comando == "mkdisk"){
-        mkdisk* nuevo = new mkdisk(parametros);// creo el disco en su clase
-        nuevo->crearDisco();
+        new mkdisk(parametros);// creo el disco en su clase
     }else if(comando == "rmdisk"){
-        rmdisk* nuevo = new rmdisk(parametros[0]);
-        nuevo->borrarDisco();
+        new rmdisk(parametros[0]);
     }else if(comando == "fdisk"){
         new fdisk(parametros, montar);
     }else if(comando == "mount"){
         this->ParametrosMount(parametros);
     }else if(comando == "umount"){
-        umount* nuevo = new umount(parametros);
-        nuevo->montadas = montar;
-        nuevo->desmontarParticion();
+        umount* nuevo = new umount(parametros, montar);
         montar = nuevo->montadas;
     }else if(comando == "mkfs"){
-        mkfs* nuevo = new mkfs(parametros);
-        nuevo->montadas = montar;
-        nuevo->particionMontada();
+        mkfs* nuevo = new mkfs(parametros, montar);
         montar = nuevo->montadas;
     }else if(comando == "rep"){
         new rep(parametros, montar);
@@ -124,6 +117,17 @@ vector<string> Interprete::ReconocerComilla(vector<string> ant) {
 void Interprete::ParametrosMount(vector<string> parametros) {
     string path, nombre;
     for (string param : parametros){
+        bool encontrado = false;
+        for (int i = 0; i < param.length(); ++i) {
+            if (param[i] == '='){
+                encontrado = true;
+                break;
+            }
+        }
+        if (!encontrado){
+            cout << "-- ERROR PARAMETRO NO ASIGNADO --" << endl;
+            return;
+        }
         stringstream input_stringstream(param);
         string name, info;
         getline(input_stringstream, name, '=');
@@ -131,10 +135,14 @@ void Interprete::ParametrosMount(vector<string> parametros) {
         name = ToLower(name);
         if (name == "-path"){
             path = info;
+            continue;
         }
         info = ToLower(info);
         if(name == "-name"){
             nombre = info;
+        }else{
+            cout << " PARAMAETRO NO ENCONTRADO EN EL COMANDO MOUNT" << endl;
+            return;
         }
     }
     if (path.empty() || nombre.empty()){

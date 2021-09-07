@@ -7,6 +7,17 @@
 
 mkdisk::mkdisk(vector<string> parametros) {
     for (string param : parametros){
+        bool encontrado = false;
+        for (int i = 0; i < param.length(); ++i) {
+            if (param[i] == '='){
+                encontrado = true;
+                break;
+            }
+        }
+        if (!encontrado){
+            cout << "-- ERROR PARAMETRO NO ASIGNADO --" << endl;
+            return;
+        }
         stringstream input_stringstream(param);
         string name, info;
         getline(input_stringstream, name, '=');
@@ -14,6 +25,7 @@ mkdisk::mkdisk(vector<string> parametros) {
         name = ToLower(name);
         if (name == "-path"){
             path = info;
+            continue;
         }
         info = ToLower(info);
         if(name == "-u"){
@@ -22,8 +34,12 @@ mkdisk::mkdisk(vector<string> parametros) {
             size = stoi(info);
         }else if(name == "-f"){
             f = info;
+        }else{
+            cout << " PARAMAETRO NO ENCONTRADO EN EL COMANDO MKDISK" << endl;
+            return;
         }
     }
+    this->crearDisco();
 }
 
 void mkdisk::crearDisco() {

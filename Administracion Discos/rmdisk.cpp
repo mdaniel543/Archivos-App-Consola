@@ -5,11 +5,28 @@
 #include "rmdisk.h"
 
 rmdisk::rmdisk(string parametro) {
+    bool encontrado = false;
+    for (int i = 0; i < parametro.length(); ++i) {
+        if (parametro[i] == '='){
+            encontrado = true;
+            break;
+        }
+    }
+    if (!encontrado){
+        cout << "-- ERROR PARAMETRO NO ASIGNADO --" << endl;
+        return;
+    }
     stringstream input(parametro);
     string name, info;
     getline(input, name, '=');
     getline(input, info, '=');
-    this->path = info;
+    if (name == "-path"){
+        this->path = info;
+    }else{
+        cout << " PARAMETRO NO ENCONTRADO EN EL COMANDO RMDISK" << endl;
+        return;
+    }
+    this->borrarDisco();
 }
 
 void rmdisk::borrarDisco() {

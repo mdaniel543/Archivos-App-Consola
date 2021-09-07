@@ -186,10 +186,6 @@ filesystem
 fstream
 -
 
-/home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.cpp
-exec.h
-/home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.h
-
 /home/daniel/Escritorio/MIA-Proyecto1-201709450/Script/exec.h
 ../Analizador/Interprete.h
 /home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.h
@@ -206,5 +202,13 @@ algorithm
 cctype
 -
 fstream
+-
+
+/home/daniel/Escritorio/MIA-Proyecto1-201709450/main.cpp
+Analizador/Interprete.h
+/home/daniel/Escritorio/MIA-Proyecto1-201709450/Analizador/Interprete.h
+cstdlib
+-
+sstream
 -
 

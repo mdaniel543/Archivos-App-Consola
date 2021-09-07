@@ -4,8 +4,19 @@
 
 #include "mkfs.h"
 
-mkfs::mkfs(vector<string> parametros) {
+mkfs::mkfs(vector<string> parametros, mount montadas) {
     for (string param : parametros){
+        bool encontrado = false;
+        for (int i = 0; i < param.length(); ++i) {
+            if (param[i] == '='){
+                encontrado = true;
+                break;
+            }
+        }
+        if (!encontrado){
+            cout << "-- ERROR PARAMETRO NO ASIGNADO --" << endl;
+            return;
+        }
         stringstream input_stringstream(param);
         string name, info;
         getline(input_stringstream, name, '=');
@@ -18,6 +29,9 @@ mkfs::mkfs(vector<string> parametros) {
             this->type = info;
         }else if(name == "-fs"){
             this->fs = info;
+        }else{
+            cout << " PARAMAETRO NO ENCONTRADO EN EL COMANDO MKFS" << endl;
+            return;
         }
     }
     if (this->id.empty()){
@@ -30,6 +44,8 @@ mkfs::mkfs(vector<string> parametros) {
     if (this->fs.empty()){
         this->fs = "2fs";
     }
+    this->montadas = montadas;
+    this->particionMontada();
 }
 
 void mkfs::particionMontada() {
@@ -133,7 +149,7 @@ void mkfs::formatear(FILE* file, mbr temp, particion auxp, ebr aux, bool primari
     fseek(file, start, SEEK_SET);
     if(this->type == "full"){
         char buff;
-        buff='\0';
+        buff='0';
         for(int i=0; i < tp; i++) { //lleno de ceros el archivo
             fwrite(&buff, sizeof(buff) , 1, file);
             fseek(file, start + i, SEEK_SET);
@@ -250,7 +266,7 @@ void mkfs::formatear(FILE* file, mbr temp, particion auxp, ebr aux, bool primari
     fseek(file, start, SEEK_SET);
     fwrite(&auxsuperbloque, sizeof(superbloque), 1, file);
     std::cout << "\nPARTICION FORMATEADA CORRECTAMENTE!!! \n";
-
+    fclose(file);
 }
 
 string mkfs::ToLower(string cadena) {

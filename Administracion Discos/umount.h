@@ -18,7 +18,7 @@
 
 class umount {
 public:
-    umount(vector<string> parametros);
+    umount(vector<string> parametros, mount montadas);
     void desmontarParticion();
     mount montadas;
     string ToLower(string cadena);
