@@ -63,4 +63,17 @@ Cada particion montada se identifica por un id(Últimos dos dígitos del Carnet 
     
     Ejemplo:
     *mkfs -type=fast -id=581A*
+---
+Los reportes de igual manera se genera con comandos de la siguiente manera:
+
+- **rep:** reportes generado con graphviz, donde podemos corroborar todo lo ejecutado
+
+    - name: nombre del reporte a generar (mbr, disk)
+    - path: indica la ruta con el nombre que tendra el reporte.
+    - id: indica el id de la particion que se utilizara, si es reporte sobre el disco se utilizara el disco al que pertenece la particion.
     
+    Ejemplo:
+    
+    *rep –id=561A -Path=/home/user/reports/reporte1.jpg -name=mbr*
+    
+    *rep -id=562A -Path=/home/user/reports/report2.pdf -name=disk*
