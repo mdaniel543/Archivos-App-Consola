@@ -180,7 +180,7 @@ void fdisk::validarDisco(particion part) {
     }
     disponible = tempDisk.mbr_tamano - disponible;
     if (disco4Particiones >= 4 && part.part_type != 'l'){
-        cout << endl << "-- EXISTEN YA EL MAXIMO DE PARTICIONES EN EL DISCO --";
+        cout << endl << "-- EXISTEN YA EL MAXIMO DE PARTICIONES EN EL DISCO --" << endl;
         return;
     }
     if(tempDisk.mbr_tamano < part.part_size && part.part_type != 'l'){
@@ -248,11 +248,14 @@ void fdisk::validarDisco(particion part) {
 void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
     bool sifunciono = false;
     int j = -1;
+    int x = -1, contador = 0;
     int auxu = -1;
     switch (fitex(Disk.disk_fit)) {
         case 1: // BEST FIT
             for (int i = 0; i < 4; ++i) {
                 if (Disk.mbr_partitions[i].part_status == '0'){
+                    contador++;
+                    x = i;
                     if (i == 0){
                         if (Disk.mbr_partitions[i + 1].part_start != -1){
                             int sizeRecuperado =  Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
@@ -268,6 +271,9 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                     }else{
                         if(i != 3){
                             if (Disk.mbr_partitions[i + 1].part_start != -1){
+                                if (Disk.mbr_partitions[i-1].part_size > 0){
+                                    Disk.mbr_partitions[i].part_start = Disk.mbr_partitions[i-1].part_start + Disk.mbr_partitions[i-1].part_size;
+                                }
                                 int sizeRecuperado =  Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
                                 if (particionu.part_size > sizeRecuperado){
                                     continue;
@@ -287,6 +293,9 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                             }
                         }else{
                             if (Disk.mbr_partitions[i].part_start != -1){
+                                if (Disk.mbr_partitions[i-1].part_size > 0){
+                                    Disk.mbr_partitions[i].part_start = Disk.mbr_partitions[i-1].part_start + Disk.mbr_partitions[i-1].part_size;
+                                }
                                 int sizeRecuperado = Disk.mbr_tamano - Disk.mbr_partitions[i].part_start;
                                 if (auxu != -1){
                                     if (auxu > sizeRecuperado){
@@ -299,6 +308,13 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                         }
                     }
                 }
+            }
+            if(j == -1 && x != -1 && contador == 1){
+                for (int i = x; i < 4-x; ++i) {
+                    Disk.mbr_partitions[i] = Disk.mbr_partitions[i+1];
+                }
+                j = 3;
+                Disk.mbr_partitions[j].part_start = -1;
             }
             sifunciono = true;
             if (j == 0){
@@ -315,6 +331,8 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
         case 2: // FIRST FIT
             for (int i = 0; i < 4; ++i) {
                 if (Disk.mbr_partitions[i].part_status == '0'){
+                    contador++;
+                    x = i;
                     if (i == 0){
                         if (Disk.mbr_partitions[i + 1].part_start != -1){
                             int sizeRecuperado =  Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
@@ -329,6 +347,9 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                     }else{
                         if(i != 3){
                             if (Disk.mbr_partitions[i + 1].part_start != -1){
+                                if (Disk.mbr_partitions[i-1].part_size > 0){
+                                    Disk.mbr_partitions[i].part_start = Disk.mbr_partitions[i-1].part_start + Disk.mbr_partitions[i-1].part_size;
+                                }
                                 int sizeRecuperado =  Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
                                 if (particionu.part_size > sizeRecuperado){
                                     continue;
@@ -346,10 +367,23 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                     }
                 }
             }
+            if (!sifunciono){
+                if(j == -1 && x != -1 && contador == 1){
+                    for (int i = x; i < 4-x; ++i) {
+                        Disk.mbr_partitions[i] = Disk.mbr_partitions[i+1];
+                    }
+                    j = 3;
+                    particionu.part_start = Disk.mbr_partitions[j - 1].part_start + Disk.mbr_partitions[j - 1].part_size;
+                    Disk.mbr_partitions[j] = particionu;
+                    sifunciono = true;
+                }
+            }
             break;
         case 3: //  WORST FIT
             for (int i = 0; i < 4; ++i) {
                 if (Disk.mbr_partitions[i].part_status == '0'){
+                    contador++;
+                    x = i;
                     if (i == 0){
                         if (Disk.mbr_partitions[i + 1].part_start != -1){
                             int sizeRecuperado =  Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
@@ -365,6 +399,9 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                     }else{
                         if(i != 3){
                             if (Disk.mbr_partitions[i + 1].part_start != -1){
+                                if (Disk.mbr_partitions[i-1].part_size > 0){
+                                    Disk.mbr_partitions[i].part_start = Disk.mbr_partitions[i-1].part_start + Disk.mbr_partitions[i-1].part_size;
+                                }
                                 int sizeRecuperado =  Disk.mbr_partitions[i + 1].part_start - Disk.mbr_partitions[i].part_start;
                                 if (particionu.part_size > sizeRecuperado){
                                     continue;
@@ -384,6 +421,9 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                             }
                         }else{
                             if (Disk.mbr_partitions[i].part_start != -1){
+                                if (Disk.mbr_partitions[i-1].part_size > 0){
+                                    Disk.mbr_partitions[i].part_start = Disk.mbr_partitions[i-1].part_start + Disk.mbr_partitions[i-1].part_size;
+                                }
                                 int sizeRecuperado = Disk.mbr_tamano - Disk.mbr_partitions[i].part_start;
                                 if (auxu != -1){
                                     if (auxu < sizeRecuperado){
@@ -396,6 +436,13 @@ void fdisk::particionPrimExt(FILE *file, particion particionu, mbr Disk) {
                         }
                     }
                 }
+            }
+            if(j == -1 && x != -1 && contador == 1){
+                for (int i = x; i < 4-x; ++i) {
+                    Disk.mbr_partitions[i] = Disk.mbr_partitions[i+1];
+                }
+                j = 3;
+                Disk.mbr_partitions[j].part_start = -1;
             }
             sifunciono = true;
             if (j == 0){

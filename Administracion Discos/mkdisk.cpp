@@ -35,7 +35,7 @@ mkdisk::mkdisk(vector<string> parametros) {
         }else if(name == "-f"){
             f = info;
         }else{
-            cout << " PARAMAETRO NO ENCONTRADO EN EL COMANDO MKDISK" << endl;
+            cout << " PARAMAETRO NO ENCONTRADO EN EL COMANDO MKDISK " << endl;
             return;
         }
     }

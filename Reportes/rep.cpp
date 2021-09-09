@@ -257,6 +257,12 @@ void rep::repDisk() {
                 s++;
             }while(otra);
             graph << "+ \"}} \"" << endl;
+            if (j == 3){
+                int fin = tempDisk.mbr_tamano - (tempDisk.mbr_partitions[j].part_start + tempDisk.mbr_partitions[j].part_size);
+                graph << "+ \" | Libre \"" << endl;
+                double porcentaje = ((double)fin/(double)tempDisk.mbr_tamano)*100.00;
+                graph << "+ \"&#92;n" << porcentaje << "% \"" <<endl;
+            }
         }else{
             graph << "+ \" | Primaria\"" << endl;
             double porcentaje = ((double)tempDisk.mbr_partitions[j].part_size/(double)tempDisk.mbr_tamano)*100.00;
@@ -302,7 +308,7 @@ void rep::crearGrafo(string graphviz) {
     string comando = "dot -Tpng " + pathPng + " -o " + pathPng;
     system(comando.c_str());
     string ds = "display " + pathPng;
-    system(ds.c_str());
+    //system(ds.c_str());
 }
 
 string rep::ToLower(string cadena) {
